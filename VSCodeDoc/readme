@@ -1,0 +1,20 @@
+set a default path
+
+Short answer
+
+Edit the user preference "terminal.integrated.cwd": "" to the path that you want the integrated terminal to open to.
+
+
+Long answer
+
+The same answer, but the long step-by-step version,
+
+In Visual Studio Code go to:
+
+Menu File → Preferences → Settings
+
+
+Now that you are in the "User Settings", using the "Search Settings" bar across the top of the window paste or type this:
+
+    terminal.integrated.cwd
+
