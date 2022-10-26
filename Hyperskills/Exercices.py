@@ -352,21 +352,132 @@ when multiple functions with the same name exist, the later one always overrides
 In this task, you are a content creator at Hyperskill. Implement the example with the factorial yourself. Your program 
 should override math.factorial() and make it print the message Don't cheat! instead of calculating a factorial. 
 """
-import math
-
-# your code here
-
-
-def new_math_factorial(number):
-    print("Don't cheat!")
-
-
-math.factorial = new_math_factorial
-
-# don't delete this line, please
-math.factorial(23)
+# import math
+#
+# # your code here
+#
+#
+# def new_math_factorial(number):
+#     print("Don't cheat!")
+#
+#
+# math.factorial = new_math_factorial
+#
+# # don't delete this line, please
+# math.factorial(23)
 
 ########################################################################################################################
 """
 Else statement
+Spellchecker
+
+Whoa! This problem requires knowledge of list collection type. If you're feeling up to the challenge, brace yourself, 
+and good luck! Otherwise, you can skip it for now and return any time later.
+Write a simple spellchecker that tells you if the word is spelled correctly. Use the dictionary in the code below: it 
+contains the list of all correctly written words.
+
+The input format:
+A single line with the "word".
+
+The output format:
+If the word is spelled correctly write Correct, otherwise, Incorrect. 
+dictionary = ["aa", "abab", "aac", "ba", "bac", "baba", "cac", "caac"]
+"""
+# dictionary = ["aa", "abab", "aac", "ba", "bac", "baba", "cac", "caac"]
+#
+# word = input()
+# Solution1:
+# if word in dictionary:
+#     print("Correct")
+# else:
+#     print("Incorrect")
+
+# Solution2:
+# print("Correct" if word in dictionary else "Incorrect")
+
+########################################################################################################################
+"""
+Else statement
+The Maximum
+Here is a program which finds the maximum of two numbers. Guess what it will print for the variables a = 9, b = 9 and 
+select the line of the code that will give such a result.
+
+if a > b:
+    print(a)
+else:
+    print(b)
+"""
+
+# if a > b:
+#     print(a)
+# else:
+#     print(b)
+
+########################################################################################################################
+"""
+Else statement
+Minimum and maximum 
+
+Imagine that your friend asked you to write a program that finds the minimum and the maximum.
+Write a program that receives two integers as its input, each number goes on a new line. The output should show:
+    The biggest number in the first line
+    The smallest number in the second line.
+Note that your friend might insert identical numbers! In this case, just output both given numbers on separate lines.
+"""
+# first_number = int(input())
+# second_number = int(input())
+#
+# if first_number > second_number:
+#     print(first_number)
+#     print(second_number)
+# elif second_number > first_number:
+#     print(second_number)
+#     print(first_number)
+# else:
+#     print(first_number)
+#     print(second_number)
+
+########################################################################################################################
+"""
+Else statement
+Triangle or not triangle
+
+Read three angles given on separate input lines and check whether they form a triangle. Print the answer in the 
+following format: "The triangle is valid!" or "The triangle is not valid!".
+"""
+# sum_triangle_angles = 180
+# angles = []
+# for _ in range(0, 3):
+#     angles.append(int(input()))
+#
+# if sum(angles) == sum_triangle_angles:
+#     print("The triangle is valid!")
+# else:
+#     print("The triangle is not valid!")
+
+########################################################################################################################
+"""
+Else statement
+Opposite Sign
+
+Read an integer as input and print it with the opposite sign.
+"""
+# number = int(input())
+# print(-number)
+
+########################################################################################################################
+"""
+While loop
+Rich man's world
+
+When a bank has financial problems the government can return a client's deposit if it is less than 700,000. The 
+interest rate for a particular deposit is 7.1% a year. The percentages are paid to the same deposit at the end of the 
+year and a new value of the interest is calculated.
+Find out how many years it will take for the sum of the deposit to exceed the value protected by the government.
+
+The input format:
+The initial sum of the deposit. It is guaranteed that the value will be between 50,000 and 700,000.
+
+The output format:
+The number of years.
 """
