@@ -481,3 +481,24 @@ The initial sum of the deposit. It is guaranteed that the value will be between 
 The output format:
 The number of years.
 """
+# initial_deposit = int(input())
+# ir = 7.1
+# allowed_returned_deposit = 700000
+# new_account_value = 0
+# year = 0
+# new_account_value += initial_deposit
+#
+# while new_account_value < allowed_returned_deposit:
+#     new_account_value += new_account_value * ir / 100
+#     year += 1
+#
+# print(year)
+
+########################################################################################################################
+"""
+While loop
+Favor
+
+Carl asks you to count the sum of the first k natural numbers. Read k from the input, then add up numbers from 1 to k 
+and print your answer.
+"""
