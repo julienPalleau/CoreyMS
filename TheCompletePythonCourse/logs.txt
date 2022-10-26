@@ -1,0 +1,4 @@
+2021-06-12 17:22:32,282 INFO     [test.py:7] This wil not show up.
+2021-06-12 17:22:32,282 WARNING  [test.py:8] This will.
+2021-06-12 17:22:32,282 DEBUG    [test.py:9] This is a debug message.
+2021-06-12 17:22:32,282 DEBUG    [test.py:10] A critical error occured

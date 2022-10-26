@@ -1,0 +1,1 @@
+The rest of asynchronous script is under S11-WebScrapingWithPython, as the chapter 11 was requested to do more stuff with threads in S13 chapter.
