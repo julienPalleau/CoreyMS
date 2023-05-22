@@ -1,0 +1,141 @@
+--- !ruby/object:Flow
+concise_attributes:
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: status
+  value_before_type_cast: active
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: priority
+  value_before_type_cast: sync
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: id
+  value_before_type_cast: 185
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: title
+  value_before_type_cast: 'Julien-DuplicationTestWorkflow-2023-05-10-Copy1stSamples&Reagents
+    [New from #181] 2023-05-12 02:56:20'
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: created_at
+  value_before_type_cast: 2023-04-24 07:01:21.000000000 Z
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: updated_at
+  value_before_type_cast: 2023-05-15 14:31:09.000000000 Z
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: content
+  value_before_type_cast: |
+    ---
+    step: SimpleConditionStrings
+    children:
+    - step: ExternalScriptFunction
+      children:
+      - step: FindElementByName
+        children:
+        - step: FindElementByName
+          children:
+          - step: ExternalScriptFunction
+            children: []
+            properties: !ruby/object:ActionController::Parameters
+              parameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+                scripter_version: current
+                explanation: explanation
+                lang: Python
+                code_template: none
+                code: "import requests\r\n\r\nsamples_el_original = variable(\"element_1\")\r\nsamples_el_duplicated_id
+                  = variable(\"element_2\")[\"id\"]\r\n\r\nprint(\"--------------------------\")\r\nprint(\"Debug:\")\r\nprint(f\"samples_el_original:
+                  {samples_el_original}\\n\\n\")\r\nprint(f\"samples_el_duplicated_id:
+                  {samples_el_duplicated_id}\\n\\n\")\r\nprint(\"--------------------------\\n\")\r\n\r\n#
+                  Iterate over the samples in the sample element of the original experiment
+                  to get stock ids\r\nsample_el_data = json.loads(samples_el_original[\"data\"])\r\nprint(f'sample_el_data:
+                  {sample_el_data}\\n')\r\nstock_id_list = []\r\nfor sample in sample_el_data[\"samples\"]:\r\n
+                  \ #stocks_id = (sample[\"stocks\"][0][\"id\"]) #Origil code. Do not
+                  give full list of IDs when multiple stocks\r\n  sample_id = sample [\"id\"]\r\n
+                  \ stocks_ids = sample[\"saved_stocks_ids\"] #From Malka's e-mail 11/05/2023.
+                  Give complete list of ids when multiple stocks allocated to one item
+                  but prevent allocation of stock.\r\n  stock_id_list.extend(stocks_ids)\r\nprint(f'stock_id_list:
+                  {stock_id_list}\\n')\r\n\r\n# Reset sample element data, necessary for
+                  updating the sample element\r\nresponse = requests.put(f'{base()}/api/v1/elements/{samples_el_duplicated_id}',
+                  json={'token': token(), 'element':{'data': None}})\r\nprint(f'Reset
+                  sample element data, return code:', response.status_code)\r\n\r\n# Add
+                  stocks to the duplicated experiment\r\nfor stock_id in stock_id_list:\r\n
+                  \ print(f'stock_id: {stock_id}, Debug base: {base()} samples_el_duplicated_id:
+                  {samples_el_duplicated_id}')\r\n  response = requests.get(f'{base()}/api/v1/sample_stocks/add_stock_by_barcode?token={token()}&element_id={samples_el_duplicated_id}&barcode={stock_id}\\n',
+                  json={'token': token()})\r\n  print(f'add stock {stock_id} to sample
+                  {samples_el_duplicated_id} return code:', response.status_code)\r\n\r\n"
+                custom_properties: ''
+                cacheable: always calc
+              permitted: false
+          properties: !ruby/object:ActionController::Parameters
+            parameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+              doc: duplicated_exp
+              element_name: Samples & Reagents
+              element_type: samples
+              element: element_2
+            permitted: false
+        properties: !ruby/object:ActionController::Parameters
+          parameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+            doc: original_exp
+            element_name: Samples & Reagents
+            element_type: samples
+            element: element_1
+          permitted: false
+      properties: !ruby/object:ActionController::Parameters
+        parameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+          scripter_version: current
+          explanation: explanation
+          lang: Python
+          code_template: none
+          code: "import requests\r\n\r\nduplicated_exp = variable(\"trigger_experiment\")\r\noriginal_exp_id
+            = duplicated_exp [\"duplicate_of\"]\r\noriginal_exp = requests.get(f'{base()}/api/v1/experiments/{original_exp_id}',
+            json={\"token\" : token()}).json()\r\nprint(f'######## {base()}/api/v1/experiments/{original_exp_id}')\r\n\r\nstore_variable('duplicated_exp',
+            duplicated_exp)\r\nstore_variable('original_exp', original_exp)\r\n\r\nprint(\"--------------------------\")\r\nprint(f'DEBUG
+            duplicated_exp: {duplicated_exp} \\n original_exp_id: {original_exp_id} \\n
+            original_exp: {original_exp}')\r\nprint(\"--------------------------\")"
+          custom_properties: duplicated_exp, original_exp
+          cacheable: always calc
+        permitted: false
+    properties:
+      action: continue
+      a: "{{trigger_experiment.title}}"
+      condition: contains
+      b: duplicate
+      when_stopped_archive: 'true'
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: webhook_id
+  value_before_type_cast: '14'
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: trigger_key
+  value_before_type_cast: projects_experiment.create
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: description
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: account_id
+  value_before_type_cast: 73494
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: env_name
+  value_before_type_cast: eu
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: user_id
+  value_before_type_cast: 31
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: important_token
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: important_base
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: cron_line
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: mode
+  value_before_type_cast: workflow
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: deleted_at
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: flow_template_guid
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: tags
+  value_before_type_cast: ''
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: flow_runs_count
+  value_before_type_cast: 160
+- !ruby/object:ActiveModel::Attribute::FromDatabase
+  name: last_flow_run_created_at
+  value_before_type_cast: 2023-05-15 14:31:09.000000000 Z
+new_record: false
+active_record_yaml_version: 2
