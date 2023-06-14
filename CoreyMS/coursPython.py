@@ -21,6 +21,15 @@
 18 - Slicing Lists and Strings
 19 - Comprehension - How tey work and why you should be using them
 20 - Sorting Lists, Tuples, and Objects
+21 - Try/Except Blocks for Error Handling
+22 - Iterators & Iterables
+23 - Iterator Functions for Efficient Looping
+24 - Python OOP - Classes and Instances - 1
+25 - Python OOP - Classes Variables - 2
+26 - Python OOP - classmethods and staticmethods - 3
+27 - Python OOP - Inheritance creating a subclass - 4
+29 - Python OOP - Property Decorators - Getters, Setters, and Deleters - 5
+30 - Module CSV - Comment lire, analyser et ecrire des fichiers csv
 
 '''
 
@@ -1200,88 +1209,875 @@ for i in my_gen:
 print('\n##################################################################################')
 print('# 20 - Sorting Lists, Tuples, and Objects                                          #')
 print('####################################################################################')
-# https://www.youtube.com/watch?v=D3JvDWO-BY4
-# List
-print("\n List:")
-li = [9, 1, 8, 2, 7, 3, 6, 4, 5]
-s_li = sorted(li)
-a = 1
-b = 2
+# # https://www.youtube.com/watch?v=D3JvDWO-BY4
+# # List
+# print("\n List:")
+# li = [9, 1, 8, 2, 7, 3, 6, 4, 5]
+# s_li = sorted(li)
+# a = 1
+# b = 2
+#
+# print(f'Sorted Variable li with sorted function s_li=sorted(li) :\t\t\t\t\t\t\t{s_li}')
+#
+# print(f'Sorted Variable li to sort in reverse order :\t\t\t\t\t\t\t\t\t\t{sorted(li, reverse=True)}')
+# li.sort()
+# print(f'Sort li variable with li.sort() operate in place as a consequence li is modified :\t{li}')
+#
+# # Tuple
+# print("\nTuple:")
+# tup = (9, 1, 8, 2, 7, 3, 6, 4, 5)
+# s_tup = sorted(tup)
+# print(f"tuple d'origine: {tup}")
+# print(f'A tuple can be sorted with sorted() and not with tup.sort() Tuple', s_tup)
+#
+# # Dictionary
+# print("\nDictionary:")
+# di = {'name': 'Corey', 'job': 'programming', 'age': None, 'os': 'Mac'}
+# s_di = sorted(di)
+# print(f"A dictionary d'origine Dict: {s_di}")
+# print(f'A dictionary can be sorted with sorted(di) Dict: {s_di}')
+#
+# # With functions other than list you need sorted
+# print('With functions other than list you need sorted')
+#
+# li = [-6, -5, -4, 1, 2, 3]
+# s_li = sorted(li)
+# print(f'list sorted with s_li=sorted(li): {s_li}')
+#
+# print(f'\nTransform the list in a list of absolute values with sorted(li, key=abs):')
+# s_li = sorted(li, key=abs)
+# print(f"sort the list {li} as absolute values {s_li}")
+#
+# # Objects
+# print("\nObjects")
+#
+#
+# class Employee():
+#     def __init__(self, name, age, salary):
+#         self.name = name
+#         self.age = age
+#         self.salary = salary
+#
+#     def __repr__(self):
+#         return f'{self.name}, {self.age}, ${self.salary}'
+#
+#
+# from operator import attrgetter
+#
+# e1 = Employee('Carl', 37, 70000)
+# e2 = Employee('Sarah', 29, 80000)
+# e3 = Employee('John', 43, 90000)
+#
+# employees = [e1, e2, e3]
+#
+#
+# def name_sort(emp):
+#     return emp.name
+#
+#
+# s_employees = sorted(employees, key=name_sort)
+# s_employees = sorted(employees, key=lambda e: e.name)
+# print(s_employees)
+#
+#
+# def age_sort(emp):
+#     return emp.age
+#
+#
+# s_employees = sorted(employees, key=age_sort)
+# s_employees = sorted(employees, key=attrgetter('age'))
+# print(s_employees)
+#
+#
+# def salary_sort(emp):
+#     return emp.salary
+#
+#
+# s_employees = sorted(employees, key=salary_sort, reverse=True)
+# print(s_employees)
 
-print(f'Sorted Variable li with sorted function s_li=sorted(li) :\t\t\t\t\t\t\t{s_li}')
+print('\n##################################################################################')
+print('# 21 - Try/Except Blocks for Error Handling                                        #')
+print('####################################################################################')
+# # https://www.youtube.com/watch?v=NIWwJbo-9_8
+#
+#
+# try:
+#     f = open('test.txt')
+# except FileNotFoundError as e:
+#     print(e)
+# except Exception as e:
+#     print(e)
+# else:
+#     print(f.read())
+#     f.close()
+# finally:
+#     print('Executing Finally...')
+#
+# # It is also possible to raise an exception on its own
+# try:
+#     f = open('test2.txt')
+#     if f.name == 'test2.txt':
+#         raise Exception
+# except FileNotFoundError as e:
+#     print(e)
+# except Exception as e:
+#     print("Error !")
+# else:
+#     print(f.read())
+#     f.close()
+# finally:
+#     print('Executing Finally...')
 
-print(f'Sorted Variable li to sort in reverse order :\t\t\t\t\t\t\t\t\t\t{sorted(li, reverse=True)}')
-li.sort()
-print(f'Sort li variable with li.sort() operate in place as a consequence li is modified :\t{li}')
-
-# Tuple
-print("\nTuple:")
-tup = (9, 1, 8, 2, 7, 3, 6, 4, 5)
-s_tup = sorted(tup)
-print(f"tuple d'origine: {tup}")
-print(f'A tuple can be sorted with sorted() and not with tup.sort() Tuple', s_tup)
-
-# Dictionary
-print("\nDictionary:")
-di = {'name': 'Corey', 'job': 'programming', 'age': None, 'os': 'Mac'}
-s_di = sorted(di)
-print(f"A dictionary d'origine Dict: {s_di}")
-print(f'A dictionary can be sorted with sorted(di) Dict: {s_di}')
-
-# With functions other than list you need sorted
-print('With functions other than list you need sorted')
-
-li = [-6, -5, -4, 1, 2, 3]
-s_li = sorted(li)
-print(f'list sorted with s_li=sorted(li): {s_li}')
-
-print(f'\nTransform the list in a list of absolute values with sorted(li, key=abs):')
-s_li = sorted(li, key=abs)
-print(f"sort the list {li} as absolute values {s_li}")
-
-# Objects
-print("\nObjects")
-
-
-class Employee():
-    def __init__(self, name, age, salary):
-        self.name = name
-        self.age = age
-        self.salary = salary
-
-    def __repr__(self):
-        return f'{self.name}, {self.age}, ${self.salary}'
-
-from operator import attrgetter
-
-e1 = Employee('Carl', 37, 70000)
-e2 = Employee('Sarah', 29, 80000)
-e3 = Employee('John', 43, 90000)
-
-employees = [e1, e2, e3]
+print('\n##################################################################################')
+print('# 22 - Iterators & Iterables                                                       #')
+print('####################################################################################')
+# # https://www.youtube.com/watch?v=jTYiNjvnHZY
+#
+# # iterables is something that can be looped over
+# nums = [1, 2, 3]
+# # for num in nums:
+# #     print(num)
+#
+# # How can we tell if something is iterable ?
+# # If something is iterable it needs to have a special method called __iter__()
+# # Let's check with dir if our list of numbs is an iterable
+# # print(dir(nums))
+# # we can see __iter__ so this list is iterable
+#
+# # Now, what make something an iterator?
+# # An iterator is an object with a state, so that it remembers where it is during iteration.
+# # An iterator as a state where it knows where it is during iteration and iterators also know how to get the next value
+# # they get their next value with __next__ method. Now look at our list nums, it doesn't have a state and it doesn't
+# # know how to look at its next value, so therefor, it is not an iterator.
+#
+# # The two lines below are equivalent but the first one is a bit ugly.
+# #i_nums = nums.__iter__()
+# i_nums = iter(nums)
+#
+# # print(i_nums)
+# # print(dir(i_nums))
+#
+# print(next(i_nums))
+# print(next(i_nums))
+# print(next(i_nums))
+#
+# while True:
+#     try:
+#         item = next(i_nums)
+#         print(item)
+#     except StopIteration:
+#         break
 
 
-def name_sort(emp):
-    return emp.name
+# # Iterator
+# class MyRange:
+#     def __init__(self, start, end):
+#         self.value = start
+#         self.end = end
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.value >= self.end:
+#             raise StopIteration
+#         current = self.value
+#         self.value += 1
+#         return current
+#
+#
+# nums = MyRange(1, 10)
+#
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+
+# # Generator
+# def my_range(start, end):
+#     current = start
+#     while current < end:
+#         yield current
+#         current += 1
+#
+#
+# nums = my_range(1, 10)
+#
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+#
+# for num in nums:
+#     print(num)
 
 
-s_employees = sorted(employees, key=name_sort)
-s_employees = sorted(employees, key=lambda e: e.name)
-print(s_employees)
+# Iterator Problem
+
+# # First possible solution with a class
+# class Sentence:
+#     def __init__(self, sentence):
+#         self.sentence = sentence
+#         self.index = 0
+#         self.words = self.sentence.split()
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.index >= len(self.words):
+#             raise StopIteration
+#         index = self.index
+#         self.index += 1
+#         return self.words[index]
+#
+#
+# my_sentence = Sentence('This is a test')
+#
+# for word in my_sentence:
+#     print(word)
+
+# print(next(my_sentence))
+# print(next(my_sentence))
+# print(next(my_sentence))
+# print(next(my_sentence))
+# print(next(my_sentence))
 
 
-def age_sort(emp):
-    return emp.age
+# # Second possible solution with a Generator
+# def sentence(sentence):
+#     for word in sentence.split():
+#         yield word
+#
+#
+# my_sentence = sentence('This is a test')
+#
+# # for word in my_setence:
+# #     print(word)
+#
+# print(next(my_sentence))
+# print(next(my_sentence))
+# print(next(my_sentence))
+# print(next(my_sentence))
 
 
-s_employees = sorted(employees, key=age_sort)
-s_employees = sorted(employees, key=attrgetter('age'))
-print(s_employees)
+print('\n##################################################################################')
+print('# 23 - Iterator Functions for Efficient Looping                                    #')
+print('####################################################################################')
+# # https://www.youtube.com/watch?v=Qu3dThVy6KQ
+import itertools
+
+#
+#
+# def lt_2(n):
+#     if n < 2:
+#         return True
+#     return False
+#
+#
+# letters = ['a', 'b', 'c', 'd']
+# numbers = [0, 1, 2, 3]
+# names = ['Corey', 'Nicole']
+# selectors = [True, True, False, True]
+#
+# print('\nAn iterator is sequential data that we can iterate or loop over')
+#
+# print('\n1 - create a counter with itertools.count(start=5, step=-2.5)')
+# counter = itertools.count(start=5, step=-2.5)
+#
+# print(next(counter))
+# print(next(counter))
+# print(next(counter))
+#
+#
+# print("\n2 - ZIP")
+# # # Let's have a look to a scenario where it can be useful
+# # data = [100, 200, 300, 400]
+# #
+# print("\n 2-1 Classic ZIP")
+# # daily_data = list(zip(range(10), data))
+# # print(daily_data)
+# #
+# print("\n 2-2Longest Zip")
+# # daily_data = list(itertools.zip_longest(range(10), data))
+# # print(daily_data)
+#
+# print('\n3 - itertools')
+# # # Itertools.cycle
+# print("\n3-1 itertools.cycle()")
+# # counter = itertools.cycle(('On', 'Off'))
+# # print(next(counter))
+# # print(next(counter))
+# # print(next(counter))
+# # print(next(counter))
+# # print(next(counter))
+# # print(next(counter))
+#
+# print("\n3-2 itertools.repeat()")
+# # # Itertools.repeat
+# # counter = itertools.repeat(2)
+# # print(next(counter))
+# # print(next(counter))
+# # print(next(counter))
+# # print(next(counter))
+# # print(next(counter))
+# # print(next(counter))
+#
+# # # we can define how many times we want to repeat, this will raise an error when you go beyond 3
+# # counter = itertools.repeat(2, times=3)
+# # squares = map(pow, range(10), itertools.repeat(2))
+# # print(list(squares))
+# #
+# # # print(next(counter))
+# # # print(next(counter))
+# # # print(next(counter))
+# # # print(next(counter))
+# # # print(next(counter))
+# # # print(next(counter))
+#
+# print('\n4 - starmap')
+# # # we use starmap
+# print('\n4-1 starmap make from multiple tuples a list')
+# # counter = itertools.repeat(2, times=3)
+# # squares = itertools.starmap(pow, [(0, 2), (1, 2), (2, 2)])
+# # print(list(squares))
+#
+#
+# # The most popular function from itertools:
+# # Combination and Permutation
+# print('\n5 - combination')
+# # result = itertools.combinations(letters, 2)
+#
+# print('\n6 - Permutation')
+# # result = itertools.permutations(letters, 2)
+#
+# print("\n7 - Repeat n times")
+# result = itertools.product(numbers, repeat=4)
+#
+# for item in result:
+#     print(item)
+#
+# print("\n7 - combined n lists in one: itertools.chain(letters, numbers, names)")
+# combined = itertools.chain(letters, numbers, names)
+#
+# for item in combined:
+#     print(item)
+# print("----------")
+# print('\n8 - Slice')
+# # In a range 0-9, slice from 0 to 4
+# print('\n8-1 In a range of 0-9, slice from 0 to 4')
+# result = itertools.islice(range(10), 5)
+#
+# for item in result:
+#     print(item)
+#
+# # In a range 0-9 from 1 to 4
+# print("\n8-3 In a range of 0-9, slice from 1 to 4")
+# result = itertools.islice(range(10), 1, 5)
+#
+# for item in result:
+#     print(item)
+#
+# # # In a range 0-9, from 1 to 4 with a step of 2
+# print("\n8-4 In a range of 0-9, slice from 1 to 4 with a step of 2")
+# result = itertools.islice(range(10), 1,  5, 2)
+#
+# for item in result:
+#     print(item)
+#
+# # # Why is this useful? This is useful because we may have an iterator which is to big to be put into memory.
+# # # For example let's imagine we have a log file with hundred of thousands lines
+# # # We could use islice to efficiently deal with this huge log file
+# print("\n8-5 islice allow you to slice a huge log file that you need to read in multiple smaller chunk/slice")
+# with open('test.log', 'r') as f:
+#     header = itertools.islice(f, 3)
+#
+#     for line in header:
+#         print(line, end='')
+#
+# print('\n9 - Selector')
+# # # Selector allow us to combine a list letters for example with a list of booleans and then print only when True
+# # result = itertools.compress(letters, selectors)
+# #
+# letters = ['a', 'b', 'c', 'd']
+# numbers = [0, 1, 2, 3]
+# names = ['Corey', 'Nicole']
+# selectors = [True, True, False, True]
+#
+# print('\n10 - Filter')
+# # Filter it filter value based on associated selector
+# print("----------")
+# print("Filter")
+# result = filter(lt_2, numbers)
+# for item in result:
+#     print(item)
+# print("----------")
+# result = itertools.filterfalse(lt_2, numbers)
+# for item in result:
+#     print(item)
+#
+# print('\n11 - Dropwhile')
+# # Dropwhile it will drop values < 2 till it meets a value which doesn't meet the condition
+# numbers = [0, 1, 2, 3, 2, 1, 0]
+# result = itertools.dropwhile(lt_2, numbers)
+#
+# for item in result:
+#     print(item)
+#
+# print("----------")
+# print("\n12 - Takewhile")
+# # Takewhile is the opposite of Dropwhile ang grab all the values that return true until it hits a value that returns
+# # false and after he got a value that returns false he just return the values that add up until that point.
+# result = itertools.takewhile(lt_2, numbers)
+# for item in result:
+#     print(item)
+
+# print("\n10 - accumulate")
+# # accumulate it just keeps a running total of values he has just seen so far
+# letters = ['a', 'b', 'c', 'd']
+# numbers = [1, 2, 3, 0]
+# names = ['Corey', 'Nicole']
+#
+# result = itertools.accumulate(numbers)
+# for item in result:
+#     print(item)
+#
+# print("----------")
+# print("\n11 - accumulate with multiply")
+# # multiply all values in a list with each other
+# import operator
+# result = itertools.accumulate(numbers, operator.mul)
+# for item in result:
+#     print(item)
+
+# print("----------")
+# print("\n12 - group by")
+#
+# def get_state(person):
+#     return person['state']
+#
+# people = [
+#     {'name': 'John Doe',
+#      'city': 'Gothman',
+#      'state': 'NY'
+#      },
+#     {
+#         'name': 'Jane Doe',
+#         'city': 'Kings Landing',
+#         'state': 'NY'
+#     },
+#     {
+#         'name': 'Corey Schafer',
+#         'city': 'Boulder',
+#         'state': 'CO'
+#     },
+#     {
+#         'name': 'Al Einstein',
+#         'city': 'Denver',
+#         'state': 'CO'
+#     },
+#     {
+#         'name': 'John Henry',
+#         'city': 'Hinton',
+#         'state': 'WV'
+#     },
+#     {
+#         'name': 'Randy Moss',
+#         'city': 'Rand',
+#         'state': 'WV'
+#     },
+#     {
+#         'name': 'Nicole K',
+#         'city': 'Asheville',
+#         'state': 'NC'
+#     },
+#     {
+#         'name': 'Jim Doe',
+#         'city': 'Charlotte',
+#         'state': 'NC'
+#     },
+#     {
+#         'name': 'Jane Taylor',
+#         'city': 'Faketown',
+#         'state': 'NC'
+#     }
+# ]
+#
+#
+# person_group = itertools.groupby(people, get_state)
+# for key, group in person_group:
+#     print(key, len(list(group)))
+#     # for person in group:
+#     #     print(person)
+#     # print()
+#
+# print("----------")
+# print("\n13 - Replicate iterator")
+# person_group = itertools.groupby(people, get_state)
+# copy1, copy2 = itertools.tee(person_group)
+# for key, group in person_group:
+#     print(key, len(list(group)))
+
+print('####################################################################################')
+print('# 24 - Python OOP - Classes and Instances - 1                                      #')
+print('####################################################################################')
+# collection class
+# https://www.youtube.com/results?search_query=corey+schafer+class+variable
+
+# https://www.youtube.com/watch?v=ZDa-Z5JzLYM
+
+# class Employee:
+#     def __init__(self, first, last, pay):
+#         self.first = first
+#         self.last = last
+#         self.pay = pay
+#         self.email = first + '.' + last + '@company.com'
+#
+#     def fullname(self):
+#         return f'{self.first} {self.last}'
 
 
-def salary_sort(emp):
-    return emp.salary
+# emp_1 = Employee('Corey', 'Schafer', 50000)
+# emp_2 = Employee('Test', 'User', 60000)
+#
+# # print(emp_1)
+# # print(emp_2)
+#
+# print(emp_1.email)
+# print(emp_2.email)
+#
+# print(f'{emp_1.first} {emp_1.last}')
+# print(f'{emp_2.first} {emp_2.last}')
+#
+# print(f'{emp_1.fullname()}')
+# print(f'{emp_2.fullname()}')
+
+print('####################################################################################')
+print('# 25 - Python OOP - Classes Variables - 2                                          #')
+print('####################################################################################')
+# https://www.youtube.com/watch?v=BJ-VvGyQxho
+
+# class Employee:
+#     num_of_emps = 0
+#     raise_amount = 1.04
+#
+#     def __init__(self, first, last, pay):
+#         self.first = first
+#         self.last = last
+#         self.pay = pay
+#         self.email = first + '.' + last + '@company.com'
+#
+#         Employee.num_of_emps += 1
+#
+#     def fullname(self):
+#         return f'{self.first} {self.last}'
+#
+#     def apply_raise(self):
+#         self.pay = int(self.pay * self.raise_amount)
+#
+#
+# print(Employee.num_of_emps)
+#
+# emp_1 = Employee('Corey', 'Schafer', 50000)
+# emp_2 = Employee('Test', 'User', 60000)
+#
+# print(Employee.__dict__)
+#
+# emp_1.raise_amount = 1.05
+#
+# print(Employee.raise_amount)
+# print(emp_1.raise_amount)
+# print(emp_2.raise_amount)
+# print(Employee.num_of_emps)
 
 
-s_employees = sorted(employees, key=salary_sort, reverse=True)
-print(s_employees)
+print('####################################################################################')
+print('# 26 - Python OOP - classmethods and staticmethods - 3                             #')
+print('####################################################################################')
+
+# https://www.youtube.com/watch?v=rq8cL2XMM5M
+
+# # Classmethod
+# class Employee:
+#     num_of_emps = 0
+#     raise_amt = 1.04
+#
+#     def __init__(self, first, last, pay):
+#         self.first = first
+#         self.last = last
+#         self.email = first + '.' + last + '@email.com'
+#         self.pay = pay
+#
+#         Employee.num_of_emps += 1
+#
+#     def fullname(self):
+#         return f'{self.first} {self.last}'
+#
+#     def apply_raise(self):
+#         self.pay = int(self.pay * self.raise_amt)
+#
+#     @classmethod
+#     def set_raise_amt(cls, amount):
+#         cls.raise_amt = amount
+#
+#     @classmethod
+#     def from_string(cls, emp_str):
+#         first, last, pay = emp_str.split('-')
+#         return cls(first, last, pay)
+#
+#
+# emp_1 = Employee('Corey', 'Schafer', 50000)
+# emp_2 = Employee('Test', 'User', 60000)
+#
+# emp_str_1 = 'John-Doe-70000'
+# emp_str_2 = 'Steve-Smith-30000'
+# emp_str_3 = 'Jane-Doe-90000'
+#
+# new_emp_1 = Employee.from_string(emp_str_1)
+#
+# print(new_emp_1.email)
+# print(new_emp_1.pay)
+
+# # Static method
+# class Employee:
+#     num_of_emps = 0
+#     raise_amt = 1.04
+#
+#     def __init__(self, first, last, pay):
+#         self.first = first
+#         self.last = last
+#         self.email = first + '.' + last + '@email.com'
+#         self.pay = pay
+#
+#         Employee.num_of_emps += 1
+#
+#     def fullname(self):
+#         return f'{self.first} {self.last}'
+#
+#     def apply_raise(self):
+#         self.pay = int(self.pay * self.raise_amt)
+#
+#     @classmethod
+#     def set_raise_amt(cls, amount):
+#         cls.raise_amt = amount
+#
+#     @classmethod
+#     def from_string(cls, emp_str):
+#         first, last, pay = emp_str.split('-')
+#         return cls(first, last, pay)
+#
+#     @staticmethod
+#     def is_workday(day):
+#         if day.weekday() == 5 or day.weekday() == 6:
+#             return False
+#         return True
+#
+#
+# emp_1 = Employee('Corey', 'Schafer', 50000)
+# emp_2 = Employee('Test', 'User', 60000)
+#
+# emp_str_1 = 'John-Doe-70000'
+# emp_str_2 = 'Steve-Smith-30000'
+# emp_str_3 = 'Jane-Doe-90000'
+#
+# import datetime
+#
+# my_date = datetime.date(2016, 7, 11)
+# print(Employee.is_workday(my_date))
+
+print('####################################################################################')
+print('# 27 - Python OOP - Inheritance creating a subclass - 4                            #')
+print('####################################################################################')
+# # https://www.youtube.com/watch?v=RSl87lqOXDE
+#
+# print("\n27-1 Inheritance")
+# class Employee:
+#     raise_amt = 1.04
+#
+#     def __init__(self, first, last, pay):
+#         self.first = first
+#         self.last = last
+#         self.email = first + '.' + last + '@email.com'
+#         self.pay = pay
+#
+#     def fullname(self):
+#         return f'{self.first} {self.last}'
+#
+#     def apply_raise(self):
+#         self.pay = int(self.pay * self.raise_amt)
+#
+#
+# class Developper(Employee):
+#     raise_amt = 1.10
+#
+#     def __init__(self, first, last, pay, prog_lang):
+#         super().__init__(first, last, pay)
+#         self.prog_lang = prog_lang
+#
+#
+# class Manager(Employee):
+#     def __init__(self, first, last, pay, employees=None):
+#         super().__init__(first, last, pay)
+#         if employees is None:
+#             self.employees = []
+#         else:
+#             self.employees = employees
+#
+#     def add_emp(self, emp):
+#         if emp not in self.employees:
+#             self.employees.append(emp)
+#
+#     def remove_emp(self, emp):
+#         if emp in self.employees:
+#             self.employees.remove(emp)
+#
+#     def print_emps(self):
+#         for emp in self.employees:
+#             print(f'-->{emp.fullname()}')
+#
+#
+# dev_1 = Developper('Corey', 'Schafer', 50000, 'Python')
+# dev_2 = Developper('Test', 'Employee', 60000, 'Java')
+#
+# mgr_1 = Manager('Sue', 'Smith', 9000, [dev_1])
+# print(mgr_1.email)
+#
+# mgr_1.add_emp(dev_2)
+# mgr_1.remove_emp(dev_1)
+# mgr_1.print_emps()
+#
+# # print(dev_1.email)
+# # print(dev_1.prog_lang)
+#
+# # print(help(Developper))
+#
+# # print(dev_1.pay)
+# # dev_1.apply_raise()
+# # print(dev_1.pay)
+#
+# # Let's have a look to is_instance or is_subclass
+# print("\n27-2 Let's have a look to is_instance or is_subclass")
+# print(f'Is mgr_1 an instance of Employee with isinstance(mgr_1, Employee): {isinstance(mgr_1, Employee)}')
+# print(f'Is Manager a Subclass of Employee with issubclass(Manager, Employee): {issubclass(Manager, Employee)}')
+
+
+print('####################################################################################')
+print('# 28 - Python OOP - Special (Magic/Dunder) Methods - 5                             #')
+print('####################################################################################')
+
+# # https://www.youtube.com/watch?v=3ohzBxoFHAY
+#
+# class Employee:
+#     raise_amt = 1.04
+#
+#     def __init__(self, first, last, pay):
+#         self.first = first
+#         self.last = last
+#         self.email = first + '.' + last + '@email.com'
+#         self.pay = pay
+#
+#     def fullname(self):
+#         return f'{self.first} {self.last}'
+#
+#     def apply_raise(self):
+#         self.pay = int(self.pay * self.raise_amt)
+#
+#     # repr is meant to be an unambiguous representation of the object and should be use for debugging and logging and
+#     # things like that it is really meant to be seen by other developers. And str is meant to be more of a readable
+#     # representation of an object and is meant to be used as a display to the end user.
+#
+#     def __repr__(self):
+#         return f"Employee({self.first}, {self.last}, {self.pay})"
+#
+#     def __str__(self):
+#         return f"{self.fullname()}, {self.email}"
+#
+#     def __add__(self, other):
+#         return self.pay + other.pay
+#
+#     def __len__(self):
+#         return len(self.fullname())
+#
+#
+# # All special methods: https://docs.python.org/3/reference/datamodel.html#special-method-names
+#
+# emp_1 = Employee('Corey', 'Schafer', 5000)
+# emp_2 = Employee('Test', 'Employee', 6000)
+#
+# print(len(emp_1))
+#
+# # print(emp_1 + emp_2)
+#
+# # print(repr(emp_1))
+# # print(str(emp_1))
+# # # the lines above are equivalent to the lines below
+# # print(emp_1.__repr__())
+# # print(emp_1.__str__())
+#
+#
+# # The 3 special methods above are the most used,
+# # Now Let's have a look to a few more
+
+
+print('####################################################################################')
+print('# 29 - Python OOP - Property Decorators - Getters, Setters, and Deleters - 6       #')
+print('####################################################################################')
+
+
+# https://www.youtube.com/watch?v=jCzT9XFZ5bw
+class Employee:
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    @property
+    def email(self):
+        return f'{self.first}.{self.last}@email.com'
+
+    @property
+    def fullname(self):
+        return f'{self.first}, {self.last}'
+
+    @fullname.setter
+    def fullname(self, name):
+        first, last = name.split(' ')
+        self.first = first
+        self.last = last
+
+    @fullname.deleter
+    def fullname(self):
+        print('Delete Name!')
+        self.first = None
+        self.last = None
+
+
+emp_1 = Employee('John', 'Smith')
+emp_1.fullname = 'Corey Schafer'
+# emp_1.first = 'Jim'
+
+print(emp_1.first)
+print(emp_1.email)
+print(emp_1.fullname)
+
+del emp_1.fullname
+
+# print('####################################################################################')
+# print('# 30 - Module CSV - Comment lire, analyser et ecrire des fichiers csv              #')
+# print('####################################################################################')
+# https://www.youtube.com/watch?v=q5uM4VKywbA
+# import csv
+#
+# with open('named.csv', 'r') as csv_file:
+#     csv_reader = csv.DictReader(csv_file)
+#
+#     with open('names.csv', 'r') as new_file:
+#         fieldnames = ['new_names.csv', 'last_name', 'email']
+#
+#         csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames, delimiter='\t')
+#
+#         csv_writer.writeheader()
+#
+#         for line in csv_reader:
+#             del line['email']
+#             csv_writer.writerow(line)
