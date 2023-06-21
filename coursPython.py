@@ -35,6 +35,8 @@
 32 - Python Tips and Tricks For Writting Better Code
 33 - Else Clauses on Loops
 34 - Env var windows
+35 - Automate Parsing and Renaming of Multiple Files
+36 - First Class Functions
 '''
 
 print('###############################################################')
@@ -2024,8 +2026,6 @@ print('#########################################################################
 # # Now Let's have a look to a few more
 
 
-
-
 print('####################################################################################')
 print('# 29 - Generate Random Numbers and Data Using the random Module                    #')
 print('####################################################################################')
@@ -2034,19 +2034,26 @@ print('#########################################################################
 
 import random
 
-
 print('\n29 - Random')
 
-first_names = ['John', 'Jane', 'Corey', 'Travis', 'Dave', 'Kurt', 'Neil', 'Sam', 'Steve', 'Tom', 'James', 'Robert', 'Michael', 'Charles', 'Joe', 'Mary', 'Maggie', 'Nicole', 'Patricia', 'Linda', 'Barbara', 'Elizabeth', 'Laura', 'Jennifer', 'Maria']
+first_names = ['John', 'Jane', 'Corey', 'Travis', 'Dave', 'Kurt', 'Neil', 'Sam', 'Steve', 'Tom', 'James', 'Robert',
+               'Michael', 'Charles', 'Joe', 'Mary', 'Maggie', 'Nicole', 'Patricia', 'Linda', 'Barbara', 'Elizabeth',
+               'Laura', 'Jennifer', 'Maria']
 
-last_names = ['Smith', 'Doe', 'Jenkins', 'Robinson', 'Davis', 'Stuart', 'Jefferson', 'Jacobs', 'Wright', 'Patterson', 'Wilks', 'Arnold', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor', 'Anderson', 'Thomas', 'Jackson', 'White', 'Harris', 'Martin']
+last_names = ['Smith', 'Doe', 'Jenkins', 'Robinson', 'Davis', 'Stuart', 'Jefferson', 'Jacobs', 'Wright', 'Patterson',
+              'Wilks', 'Arnold', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore',
+              'Taylor', 'Anderson', 'Thomas', 'Jackson', 'White', 'Harris', 'Martin']
 
 street_names = ['Main', 'High', 'Pearl', 'Maple', 'Park', 'Oak', 'Pine', 'Cedar', 'Elm', 'Washington', 'Lake', 'Hill']
 
-fake_cities = ['Metropolis', 'Eerie', "King's Landing", 'Sunnydale', 'Bedrock', 'South Park', 'Atlantis', 'Mordor', 'Olympus', 'Dawnstar', 'Balmora', 'Gotham', 'Springfield', 'Quahog', 'Smalltown', 'Epicburg', 'Pythonville', 'Faketown', 'Westworld', 'Thundera', 'Vice City', 'Blackwater', 'Oldtown', 'Valyria', 'Winterfell', 'Braavos‎', 'Lakeview']
+fake_cities = ['Metropolis', 'Eerie', "King's Landing", 'Sunnydale', 'Bedrock', 'South Park', 'Atlantis', 'Mordor',
+               'Olympus', 'Dawnstar', 'Balmora', 'Gotham', 'Springfield', 'Quahog', 'Smalltown', 'Epicburg',
+               'Pythonville', 'Faketown', 'Westworld', 'Thundera', 'Vice City', 'Blackwater', 'Oldtown', 'Valyria',
+               'Winterfell', 'Braavos‎', 'Lakeview']
 
-states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
-
+states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY',
+          'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH',
+          'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
 
 print('29 - 1 random.random(), random.randint(), radom.choice()')
 greetings = ['Hello', 'Hi', 'Hey', 'Howdy', 'Hola']
@@ -2074,7 +2081,6 @@ print(deck)
 print("Let's create a hand in taking 5 cards take off a card twice (so you don't repeat a same number)")
 hand = random.sample(deck, k=5)
 
-
 for num in range(100):
     first = random.choice(first_names)
     last = random.choice(last_names)
@@ -2090,9 +2096,6 @@ for num in range(100):
     email = first.lower() + last.lower() + '@bogusemail.com'
 
     print(f'{first} {last}\n{phone}\n{address}\n{email}\n')
-
-
-
 
 print('####################################################################################')
 print('# 30 - Python OOP - Property Decorators - Getters, Setters, and Deleters - 6       #')
@@ -2444,7 +2447,6 @@ print('#########################################################################
 #     print(f'test {i}')
 
 
-
 print('####################################################################################')
 print('# 34- ENV VARS WINDOWS                                                             #')
 print('####################################################################################')
@@ -2458,9 +2460,6 @@ print('#########################################################################
 # print(db_password)
 
 
-
-
-
 print('####################################################################################')
 print('# 35- How to send Emails Using Python - Plain Text, Adding Attachments, HTML       #\n'
       "# emails and More - NE FONCTIONNE PAS POUR L'INSTANT MAIL setup                    #")
@@ -2471,7 +2470,6 @@ import smtplib
 
 EMAIL_ADDRESS = os.environ.get('DB_USER')
 EMAIL_PASSWORD = os.environ.get('DB_PASS')
-
 
 # with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
 #     smtp.ehlo()
@@ -2488,9 +2486,6 @@ EMAIL_PASSWORD = os.environ.get('DB_PASS')
 #     smtp.sendmail(EMAIL_ADDRESS, '', msg)
 
 
-
-
-
 print('####################################################################################')
 print('# 35 - Automate Parsing and Renaming of Multiple Files                             #')
 print('####################################################################################')
@@ -2503,7 +2498,62 @@ for f in os.listdir():
     file_name, file_ext = os.path.splitext(f)
     if 'IMG' in file_name:
         f_title, f_number = file_name.split('_')
-        result[f_number]=f_title
+        result[f_number] = f_title
 for i, x in enumerate(sorted(result.keys())):
     print(x, list(result.values())[i])
 
+print('####################################################################################')
+print('# 36 - First Class Functions                                                       #')
+print('####################################################################################')
+# https://www.youtube.com/watch?v=kr0mpwqttM0
+'''
+First-Class Functions:
+"A Programming language is said to have first-class functions if it treats functions as first-class citizens."
+
+First-Class Citizen (Programming):
+"A first-class citizen (sometimes called first class objects) in a programming language is an entity which supports
+all the operations generally available to other entities. These operations typically include being passed as an
+argument, returned from a function, and assigned to a variable."
+'''
+
+
+def square(x):
+    return x * x
+
+
+f = square(5)
+
+print(square)
+print(f)
+
+f = square
+print(square)
+print(f)
+print('''f = square
+print(square)
+print(f)''')
+print(f'in the example above we now have f which point to the memory addres of square function, so '
+      f'f is equal to square function')
+
+print(f'So far we assigned function to a variable, but we can also pass function as argument and return'
+      f'function as the result of other functions')
+print(f"if a function accepts other functions as arguments or returns functions as their results"
+      f"that's what you call a higher order function so, first let's look at an example of passing a function as"
+      f"argument to another function so a great example of this is the map function, the map function take a "
+      f"function and an array as its arguments and it runs each value of that array through the provided function"
+      f"and it returns a new array of those results")
+
+
+def my_map(func, arg_list):
+    result = []
+    for i in arg_list:
+        result.append(func(i))
+    return result
+
+
+square = my_map(square, [1, 2, 3, 4, 5])
+print(square)
+
+
+def cube(x):
+    return x * x * x
