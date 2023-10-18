@@ -67,3 +67,4 @@ print(f"Si je regarde ma nouvelle serie avec l'index trie:\n{s}")
 # iloc[0] me permet d'obtenir le premier element de la serie
 print("\n")
 print(s.iloc[0])
+print(f"slice sur index donc comportement habituel de i a j-1:\n{s.iloc[1:3]}") # slice sur index donc on retrouve le comportement habituel du slice de i a j-1
