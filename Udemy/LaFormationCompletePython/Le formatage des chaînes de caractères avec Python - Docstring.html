@@ -1,0 +1,1033 @@
+
+
+
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:site_name" content="Docstring"/>
+
+    
+    <meta name="description" content="Il existe plusieurs façons de formater une chaîne de caractères. Depuis la version 3.6 de Python, une des façons de faire les plus efficaces est d&#x27;utiliser">
+    <meta property="og:image" content="https://www.docstring.fr/media/blog_posts/le-formatage-des-chaines-de-caracteres-avec-python/thumbnail/le-formatage-des-chaines-de-caracteres-avec-python.jpg"/>
+    <meta property="og:description" content="Il existe plusieurs façons de formater une chaîne de caractères. Depuis la version 3.6 de Python, une des façons de faire les plus efficaces est d&#x27;utiliser"/>
+    <meta property="og:url" content="https://www.docstring.fr/blog/le-formatage-des-chaines-de-caracteres-avec-python/"/>
+    <meta property="og:title" content="Le formatage des chaînes de caractères avec Python"/>
+    <meta property="og:type" content="article" />
+
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="/static/fonts/Feather/feather.css">
+    <link rel="stylesheet" href="/static/libs/jarallax/dist/jarallax.css">
+    <link rel="stylesheet" href="/static/css/darcula.css">
+
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type='image/x-icon'>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/static/css/theme.min.css">
+    <link rel="stylesheet" href="/static/css/toastr.min.css">
+    <link rel="stylesheet" href="/static/css/style.css?v=9">
+
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60113070-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'UA-60113070-3');
+        </script>
+
+        <script async defer data-domain="docstring.fr" src="https://plausible.io/js/plausible.js"></script>
+
+    
+
+    
+
+    <title>
+        Le formatage des chaînes de caractères avec Python - Docstring
+    </title>
+</head>
+
+<body class="bg-dark">
+
+<!-- This is an empty div used to create a temporary textarea in order to copy code to clipboard. DO NOT REMOVE! -->
+<div id="textarea-to-copy-text-to-clipboard"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark mx-lg-10 mx-2"  id="main-header">
+    <a href="/">
+        <img src="/static/img/logo_dark.png" class="navbar-brand-img" id="docstring-logo" alt="Docstring Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto mt-2 align-items-center">
+
+            <li class="nav-item dropdown text-center">
+                <a class="nav-link  font-weight-lighter text-white-50 "
+                   id="navbarBlog" href="/formations/">
+                    Formations
+                </a>
+
+
+
+
+
+
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  font-weight-lighter text-white-50 "
+                   id="navbarBlog" href="/blog/">
+                    Articles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  font-weight-lighter text-white-50 "
+                   id="navbarBlog" href="/podcast/">
+                    Podcast
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  font-weight-lighter text-white-50"
+                   id="navbarClub"
+                   href="/le_club">
+                    
+                </a>
+            </li>
+            
+                <li class="nav-item d-none"
+                    id="shopping-cart-li">
+                    <a class="nav-link  font-weight-lighter "
+                       id="navbarCheckout" href="/panier/">
+                        <i class="fe fe-shopping-cart">
+                                <span class="badge badge-lg badge-pill badge-danger" id="shopping-cart-number">
+                                    0
+                                </span>
+                        </i>
+                    </a>
+                </li>
+            
+        </ul>
+        <ul class="navbar-nav mt-2 align-items-center">
+            
+                <li class="nav-item dropdown text-center">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDocumentation" role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        <span class="avatar avatar-xl">
+                            <img src="/static/img/default_profile_picture.jpg" alt="Image de profile" class="rounded-circle avatar-img">
+                        </span>
+                    </a>
+                    <div class="dropdown-menu px-5 navbar-submenu bg-secondary" aria-labelledby="navbarDocumentation">
+                        <a class="dropdown-item text-white mb-5" href="/">🚀 Tableau de Bord</a>
+                        <a class="dropdown-item text-white mb-5" href="/accounts/profil/general">👤 Profil</a>
+                        <a class="dropdown-item text-danger" href="/accounts/logout/">👋 Déconnexion</a>
+                    </div>
+                </li>
+            
+        </ul>
+    </div>
+</nav>
+
+
+
+
+
+<!-- IMAGE
+================================================== -->
+<section data-jarallax data-speed=".8" class="py-12 py-md-15 bg-cover jarallax" style="background-image: url(/media/blog_posts/le-formatage-des-chaines-de-caracteres-avec-python/thumbnail/le-formatage-des-chaines-de-caracteres-avec-python.jpg);"></section>
+
+<div id="post-body">
+
+    <!-- HEADER
+    ================================================== -->
+    <section class="pt-8 pt-md-9">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+
+                    <!-- Heading -->
+                    <div class="col-12 d-flex justify-content-center">
+                        
+                        <h1 class="display-4 text-center text-light">
+                            Le formatage des chaînes de caractères avec Python
+                        </h1>
+
+                    </div>
+
+                    <!-- Text -->
+                    <h2 class="lead mb-7 text-center text-muted">
+                        Il existe plusieurs façons de formater une chaîne de caractères. Depuis la version 3.6 de Python, une des façons de faire les plus efficaces est d&#x27;utiliser les f-string.
+                    </h2>
+
+                    <!-- Meta -->
+                    <div class="row align-items-center py-5 border-top border-bottom">
+                        <div class="col-auto">
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-lg">
+                                <img src="/media/profile_pictures/33.jpg" alt="Image de profil de l'auteur" class="avatar-img rounded-circle">
+                            </div>
+
+                        </div>
+                        <div class="col ml-n5">
+
+                            <!-- Name -->
+                            <h6 class="text-uppercase mb-0 text-light">
+                                Thibault Houdon
+                            </h6>
+
+                            <!-- Date -->
+                            <time class="font-size-sm text-muted" datetime="2020-07-08">
+                                Publié le 08 jul 2020 | <i class="fe fe-reset fe-clock"></i> 12mn
+                            </time>
+
+                        </div>
+                        <div class="col-auto">
+
+                            <!-- Share -->
+                            <span class="h6 text-uppercase text-muted d-none d-md-inline mr-4">
+                                Partager:
+                            </span>
+
+                            <!-- Icons -->
+                            
+
+<ul class="d-inline list-unstyled list-inline list-social">
+    <li class="list-inline-item list-social-item mr-3">
+        <div class="" data-href="https%3A//www.docstring.fr/blog/le-formatage-des-chaines-de-caracteres-avec-python/" data-layout="button" data-size="small">
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.docstring.fr/blog/le-formatage-des-chaines-de-caracteres-avec-python/"
+               class="fb-xfbml-parse-ignore" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <img src="/static/img/icons/social/facebook.svg" class="list-social-icon" alt="Partager sur Facebook">
+            </a>
+        </div>
+    </li>
+    <li class="list-inline-item list-social-item mr-3">
+        <a class="twitter-share-button"
+           href="https://twitter.com/intent/tweet?text=Il existe plusieurs façons de formater une chaîne de caractères. Depuis la version 3.6 de Python, une des façons de faire les plus efficaces est d&#x27;utiliser les f-string.&hashtags=docstring&url=https%3A//www.docstring.fr/blog/le-formatage-des-chaines-de-caracteres-avec-python/" target="_blank"
+           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+            <img src="/static/img/icons/social/twitter.svg" class="list-social-icon" alt="Partager sur Twitter">
+        </a>
+    </li>
+</ul>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
+    <!-- SECTION
+    ================================================== -->
+    <section class="pt-6 pt-md-8">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div id="start-of-post"></div>
+                <div class="col-md-10 blog-content text-white-75">
+                    <h2 class="border-bottom text-light toc">🐍 Au commencement, il y avait la concat&eacute;nation</h2>
+
+<p>Avant de parler de formatage, on parle souvent de concat&eacute;nation.</p>
+
+<div class="note">La concat&eacute;nation consiste &agrave; mettre bout &agrave; bout plusieurs cha&icirc;nes de caract&egrave;res.</div>
+
+<p>La concat&eacute;nation peut se faire tr&egrave;s simplement avec l&#39;op&eacute;rateur math&eacute;matique <code>+ </code>:</p>
+
+<pre>
+<code class="language-python">protocole = "https://"
+nom_du_site = "Docstring"
+extension = "fr"
+
+url = protocole + "www." + nom_du_site + "." + extension
+</code></pre>
+
+<p>&Ccedil;a fonctionne, mais tr&egrave;s rapidement vous allez observer deux probl&egrave;mes :</p>
+
+<ul>
+	<li>Ce n&#39;est pas tr&egrave;s agr&eacute;able &agrave; lire.</li>
+	<li>Vous ne pouvez concat&eacute;ner que des objets du m&ecirc;me type (car Python est un langage fortement typ&eacute;).</li>
+</ul>
+
+<p>Ainsi, le code suivant retournera une erreur car la variable <code>age</code> est un nombre entier :</p>
+
+<pre>
+<code class="language-python">&gt;&gt;&gt; age = 26
+&gt;&gt;&gt; phrase = "J'ai " + age + " ans."
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: must be str, not int</code></pre>
+
+<p>Pour palier &agrave; cette erreur, il faut convertir la variable <code>age</code> en cha&icirc;ne de caract&egrave;res :</p>
+
+<pre>
+<code class="language-python">&gt;&gt;&gt; age = 26
+&gt;&gt;&gt; phrase = "J'ai " + str(age) + " ans."
+"J'ai 26 ans."</code></pre>
+
+<p>Et on retombe sur le premier probl&egrave;me : &ccedil;a devient tr&egrave;s vite difficile &agrave; lire et c&#39;est&nbsp;le meilleur moyen de se retrouver avec des <code>TypeError</code>.</p>
+
+<p>Il existe un autre moyen d&#39;ins&eacute;rer des objets dans une cha&icirc;ne de caract&egrave;res qui permet de sp&eacute;cifier directement le type des donn&eacute;es ins&eacute;r&eacute;es.</p>
+
+<div class="warning">Cette fa&ccedil;on de faire est obsol&egrave;te mais on continue de la retrouver dans de nombreux scripts Python. Il est important de comprendre donc de quoi il en retourne.</div>
+
+<p>Pour ce faire, on utilise l&#39;op&eacute;rateur modulo (<code>%</code>) et on sp&eacute;cifie ensuite&nbsp;le format des donn&eacute;es que l&#39;on ins&egrave;re dans la cha&icirc;ne de caract&egrave;res.</p>
+
+<pre>
+<code class="language-python">age = 26
+phrase = "J'ai %d ans." %age  # "J'ai 26 ans."
+phrase = "J'ai %f ans." %age  # "J'ai 26.000000 ans."
+</code></pre>
+
+<p>👉 En utilisant <code>%d</code> on se retrouve avec un nombre entier.</p>
+
+<p>👉 En utilisant <code>%f</code>, la variable <code>age</code>, qui est au d&eacute;part un nombre entier, se retrouve dans la cha&icirc;ne de caract&egrave;res sous forme de nombre d&eacute;cimal :</p>
+
+<p>Cette fa&ccedil;on de faire a &eacute;t&eacute; longtemps la m&eacute;thode privil&eacute;gi&eacute;e pour formater des cha&icirc;nes de caract&egrave;res, raison pour laquelle vous la verrez souvent dans certains scripts.</p>
+
+<p>Certains&nbsp;continuent m&ecirc;me d&#39;utiliser cette fa&ccedil;on de faire alors qu&#39;il existe maintenant des m&eacute;thodes bien plus efficaces comme celles que nous allons voir dans la suite de cet article.</p>
+
+<h2 class="border-bottom text-light toc">🐍 La m&eacute;thode format</h2>
+
+<p>Pour &eacute;viter les erreurs de type et ins&eacute;rer des objets dans une cha&icirc;ne de caract&egrave;res, on peut utiliser la m&eacute;thode <code>format</code>.</p>
+
+<p>Cette m&eacute;thode permet d&#39;ins&eacute;rer des objets &agrave; l&#39;int&eacute;rieur d&#39;emplacements sp&eacute;cifi&eacute;s dans la cha&icirc;ne de caract&egrave;res par des <strong>accolades</strong> :</p>
+
+<pre>
+<code class="language-python">age = 26
+phrase = "J'ai {} ans".format(age)</code></pre>
+
+<p>Ici, pas besoin de convertir la variable <code>age</code> en cha&icirc;ne de caract&egrave;res. La m&eacute;thode format s&#39;en charge pour nous et nous &eacute;vitons ainsi le <code>TypeError</code>.</p>
+
+<p>Cela permet &eacute;galement de garder une certaine continuit&eacute; dans notre cha&icirc;ne de caract&egrave;res qui ne se retrouve pas entrecoup&eacute;e d&#39;op&eacute;rateurs <code>+</code>.</p>
+
+<p>On peut &eacute;galement sp&eacute;cifier &agrave; l&#39;int&eacute;rieur des accolades un nom qu&#39;on utilisera comme param&egrave;tre dans la m&eacute;thode format pour obtenir une phrase encore plus claire :</p>
+
+<pre>
+<code class="language-python">age_de_lutilisateur = 26
+phrase = "J'ai {age} ans".format(age=age_de_lutilisateur)</code></pre>
+
+<p>On peut mettre autant d&#39;emplacements dans une cha&icirc;ne de caract&egrave;res que n&eacute;cessaire.</p>
+
+<p>Il faudra cependant faire attention de passer autant d&#39;&eacute;l&eacute;ments &agrave; la m&eacute;thode format qu&#39;il y a d&#39;emplacements dans notre cha&icirc;ne de caract&egrave;res.</p>
+
+<p>Par exemple, le code suivant fonctionne :</p>
+
+<pre>
+<code class="language-python">prenom = "Pierre"
+age = 26
+phrase = "Je m'appelle {} et j'ai {} ans.".format(prenom, age)</code></pre>
+
+<p>Mais ci-dessous nous aurons une erreur (<code><strong>IndexError: tuple index out of range</strong></code>) car il y a deux emplacements dans la cha&icirc;ne de caract&egrave;res mais un seul &eacute;l&eacute;ment est pass&eacute; &agrave; la m&eacute;thode format :</p>
+
+<pre>
+<code class="language-python">prenom = "Pierre"
+age = 26
+phrase = "Je m'appelle {} et j'ai {} ans.".format(prenom)</code></pre>
+
+<p>On peut &eacute;galement sp&eacute;cifier &agrave; l&#39;int&eacute;rieur des accolades un indice, qui fera r&eacute;f&eacute;rence &agrave; la position de l&#39;argument&nbsp;de la m&eacute;thode format &agrave; utiliser.</p>
+
+<p>👉 C&#39;est tr&egrave;s pratique si vous souhaitez r&eacute;utiliser un argument&nbsp;:</p>
+
+<pre>
+<code class="language-python">prenom = "Pierre"
+age = 26
+langage = "Python"
+phrase = "Je m'appelle {0} et j'ai {1} ans. {0} apprends le langage {2}.".format(prenom, age, langage)
+# Je m'appelle Pierre et j'ai 26 ans. Pierre apprends le langage Python.</code></pre>
+
+<p>On peut &eacute;galement remettre des noms &agrave; l&#39;int&eacute;rieur des accolades afin d&#39;obtenir quelque chose de plus agr&eacute;able &agrave; lire :</p>
+
+<pre>
+<code class="language-python">prenom = "Pierre"
+age = 26
+langage = "Python"
+phrase = "Je m'appelle {prenom} et j'ai {age} ans. {prenom} apprends le langage {langage}.".format(prenom=prenom,
+                                                                                                   age=age,
+                                                                                                   langage=langage)</code></pre>
+
+<div class="note">Le nom que vous mettez &agrave; l&#39;int&eacute;rieur des accolades n&#39;a pas besoin d&#39;&ecirc;tre le m&ecirc;me que la variable que vous passez &agrave; la m&eacute;thode format. On aurait tr&egrave;s bien pu faire :</div>
+
+<pre>
+<code class="language-python">prenom = "Pierre"
+age = 26
+langage = "Python"
+phrase = "Je m'appelle {user} et j'ai {age} ans. {user} apprends le langage {learning}.".format(user=prenom,
+                                                                                                age=age,
+                                                                                                learning=langage)</code></pre>
+
+<p>👉 La m&eacute;thode format&nbsp;permet donc d&#39;obtenir un code beaucoup plus facile &agrave; lire et &eacute;vite de s&#39;emb&ecirc;ter avec les fonctions de conversion.</p>
+
+<p>Si on reprend l&#39;exemple de l&#39;URL du d&eacute;but de l&#39;article&nbsp;:</p>
+
+<pre>
+<code class="language-python">protocole = "https://"
+nom_du_site = "Docstring"
+extension = "fr"
+
+# Avec l'opérateur +
+url = protocole + "www." + nom_du_site + "." + extension
+
+# Avec la méthode format
+url = "{}www.{}.{}".format(protocole, nom_du_site, extension)
+url = "{protocole}www.{domaine}.{extension}".format(protocole=protocole,
+                                                    domaine=nom_du_site,
+                                                    extension="fr")
+</code></pre>
+
+<h2 class="border-bottom text-light toc">🐍 Les f-string</h2>
+
+<p>Depuis la version 3.6 de Python, une fonctionnalit&eacute; tr&egrave;s int&eacute;ressante a fait son apparition&nbsp;: <strong>les f-string</strong>.</p>
+
+<p>Derri&egrave;re ce nom un peu bizarre se trouve une fa&ccedil;on tr&egrave;s efficace de formater des cha&icirc;nes de caract&egrave;res.</p>
+
+<p>C&#39;est vrai autant pour la lisibilit&eacute;&nbsp;que pour les performances, qui seront meilleures qu&#39;avec la m&eacute;thode format (&ccedil;a reste de l&#39;ordre du milli&egrave;me de milliseconde mais tout de m&ecirc;me).</p>
+
+<p>Pour utiliser les f-string, il suffit de rajouter la lettre <strong>f</strong> devant votre cha&icirc;ne de caract&egrave;res :</p>
+
+<pre>
+<code class="language-python">phrase = f"Je suis un f-string."</code></pre>
+
+<p>On peut ensuite, comme avec la m&eacute;thode format, ins&eacute;rer des donn&eacute;es dans la cha&icirc;ne de caract&egrave;res avec les accolades.</p>
+
+<p>La diff&eacute;rence majeure r&eacute;side dans le fait qu&#39;on peut &eacute;crire du code Python directement dans les accolades.</p>
+
+<p>On retrouve donc la flexibilit&eacute; de la m&eacute;thode format mais avec quelque chose d&#39;encore plus facile &agrave; lire.</p>
+
+<p>Reprenons l&#39;exemple de l&#39;URL :</p>
+
+<pre>
+<code class="language-python">protocole = "https://"
+nom_du_site = "Docstring"
+extension = "fr"
+
+url = f"{protocole}www.{nom_du_site}.{extension}"  # https://www.Docstring.fr</code></pre>
+
+<p>Vous souhaitez mettre le nom du site en minuscule ?</p>
+
+<p>Aucun probl&egrave;me, on peut utiliser la m&eacute;thode <code>lower</code> directement &agrave; l&#39;int&eacute;rieur du f-string :</p>
+
+<pre>
+<code class="language-python">protocole = "https://"
+nom_du_site = "Docstring"
+extension = "fr"
+
+url = f"{protocole}www.{nom_du_site.lower()}.{extension}"  # https://www.docstring.fr</code></pre>
+
+<p>On peut ins&eacute;rer n&#39;importe quel type d&#39;objet dans un f-string sans que cela ne pose de probl&egrave;me &agrave; Python :</p>
+
+<pre>
+<code class="language-python">&gt;&gt;&gt; liste = ['Pommes', 'Poires', 'Bananes']
+&gt;&gt;&gt; print(f"Voici votre liste de courses : {liste}")
+Voici votre liste de courses : ['Pommes', 'Poires', 'Bananes']</code></pre>
+
+<p>Et comme toujours, on peut &eacute;crire du code Python directement &agrave; l&#39;int&eacute;rieur des accolades :</p>
+
+<pre>
+<code class="language-python">&gt;&gt;&gt; liste = ['Pommes', 'Poires', 'Bananes']
+&gt;&gt;&gt; print(f"Voici votre liste de courses : {', '.join(liste)}")
+Voici votre liste de courses : Pommes, Poires, Bananes</code></pre>
+
+<div class="warning">Faites attention cependant &agrave; garder un code facile &agrave; lire !&nbsp;Ce n&#39;est pas parce qu&#39;on peut tout faire &agrave; l&#39;int&eacute;rieur d&#39;un f-string qu&#39;on doit le faire !</div>
+
+<p>Par exemple, &eacute;vitez de faire ceci :</p>
+
+<pre>
+<code class="language-python">liste = ['Pommes', 'Poires', 'Bananes']
+print(f"Voici votre liste de courses : {', '.join([fruit.upper() if fruit.lower() == 'pommes' else fruit for fruit in liste])}")
+# Voici votre liste de courses : POMMES, Poires, Bananes</code></pre>
+
+<p>Il vaut mieux d&eacute;couper un peu plus notre code pour le rendre plus lisible :</p>
+
+<pre>
+<code class="language-python">liste = ['Pommes', 'Poires', 'Bananes']
+liste_final = [fruit.upper() if fruit.lower() == 'pommes' else fruit for fruit in liste]
+liste_format = ', '.join(liste_final)
+print(f"Voici votre liste de courses : {liste_format}")
+# Voici votre liste de courses : POMMES, Poires, Bananes</code></pre>
+
+<p>Et si apr&egrave;s &ccedil;a vous oubliez d&#39;acheter des pommes, je ne peux plus rien pour vous 🤷&zwj;♂️</p>
+
+<p>Pour finir, sachez qu&#39;il est tout &agrave; fait possible de cr&eacute;er un f-string sur plusieurs lignes :</p>
+
+<pre>
+<code class="language-python">prenom = "Pierre"
+phrase = (
+  f"Bonjour {prenom} et "
+  "bienvenue sur Docstring. "
+  f"Passez une bonne journée {prenom} !"
+)
+# 'Bonjour Pierre et bienvenue sur Docstring. Passez une bonne journée Pierre !'</code></pre>
+
+<h2 class="border-bottom text-light toc">🐍 Les caract&egrave;res sp&eacute;ciaux</h2>
+
+<p>Vous l&#39;avez peut-&ecirc;tre vu venir...</p>
+
+<p>On utilise des accolades pour indiquer des emplacements &agrave; l&#39;int&eacute;rieur d&#39;une cha&icirc;ne de caract&egrave;res.</p>
+
+<p>Comment faire alors pour ins&eacute;rer des accolades 🤯 ?</p>
+
+<p>👉 Facile, il suffit de les <strong>tripler</strong> !</p>
+
+<pre>
+<code class="language-python">&gt;&gt;&gt; prenom = "Pierre"
+&gt;&gt;&gt; f"Je me nomme {{prenom}}"
+'Je me nomme {prenom}'
+&gt;&gt;&gt; f"Je me nomme {{{prenom}}}"
+'Je me nomme {Pierre}'</code></pre>
+
+<div class="warning">Si vous doublez les accolades, la variable ne sera pas &eacute;valu&eacute;e (les accolades sont bien visibles mais on retrouve la cha&icirc;ne de caract&egrave;res prenom au lieu de sa valeur).</div>
+
+<p>En triplant les accolades, on a bien des accolades qui entourent la valeur associ&eacute;e &agrave; la variable <code>prenom</code>.</p>
+
+<p>👉 Faites attention &eacute;galement de&nbsp;varier les guillemets si vous utilisez du code Python &agrave; l&#39;int&eacute;rieur d&#39;un f-string !</p>
+
+<p>Par exemple, pour r&eacute;cup&eacute;rer la cl&eacute; d&#39;un dictionnaire :</p>
+
+<pre>
+<code class="language-python">profession = {'Pierre': 'ingénieur'}
+phrase = f"Pierre est {profession["Pierre"]}"
+# SyntaxError: invalid syntax</code></pre>
+
+<p>Les guillemets ferment la cha&icirc;ne de caract&egrave;res et on se retrouve avec une erreur de syntaxe.</p>
+
+<p>Il faut donc utiliser des guillemets simple (ou vice-versa) :</p>
+
+<pre>
+<code class="language-python">profession = {'Pierre': 'ingénieur'}
+phrase = f"Pierre est {profession['Pierre']}"
+phrase = f'Pierre est {profession["Pierre"]}'</code></pre>
+
+<h2 class="border-bottom text-light toc">🐍 Quelques options de formatage</h2>
+
+<p>Il est possible de sp&eacute;cifier des options de formatage avanc&eacute;es directement &agrave; l&#39;int&eacute;rieur des accolades.</p>
+
+<p>Les options de formatages sont s&eacute;par&eacute;es des donn&eacute;es par le symbole des deux-points :</p>
+
+<pre>
+<code class="language-python">f"{valeur:formatage}"</code></pre>
+
+<div class="note">Les options suivantes sont disponibles &agrave; la fois avec les f-string et la m&eacute;thode format.</div>
+
+<p>Pour &#39;padder&#39; un nombre, on peut par exemple faire :</p>
+
+<pre>
+<code class="language-python">nombre = 12
+
+# Avec format
+nombre_pad = "{:04d}".format(nombre)  # 0012
+
+# Avec un f-string
+nombre_pad = f"{nombre:04d}"  # 0012
+</code></pre>
+
+<p>Voici une liste non exhaustive d&#39;options de formatage que j&#39;utilise tr&egrave;s souvent&nbsp;👇</p>
+
+<h3><strong>👉 </strong><strong>&#39;Padder&#39; un nombre</strong></h3>
+
+<pre>
+<code class="language-python">f"{12:04d}"</code></pre>
+
+<p>Output</p>
+
+<pre>
+<code class="language-python">'0012'</code></pre>
+
+<p>Tr&egrave;s pratique quand vous travaillez avec des s&eacute;quences.</p>
+
+<pre>
+<code class="language-python">for i in range(100):
+    image_path = f"image_{i:04d}.jpg" # image_0001.jpg</code></pre>
+
+<h3><strong>&nbsp;👉 Formater une date</strong></h3>
+
+<pre>
+<code class="language-python">from datetime import datetime
+f'{datetime(2020, 8, 7, 9, 0):Le %Y-%m-%d à %H:%M}'
+# 'Le 2020-08-07 à 09:00'</code></pre>
+
+<p>J&#39;utilise cette astuce sur cet article pour afficher la date en haut de la page 😉</p>
+
+<p>Pour une liste plus compl&egrave;te des options de formatage disponibles pour les objets de type date, je vous conseille <a href="http://strftime.org/" target="_blank">ce site</a> tr&egrave;s bien fait.</p>
+
+<h3><strong>👉 </strong><strong>Tronquer une cha&icirc;ne de caract&egrave;res</strong></h3>
+
+<pre>
+<code class="language-python">phrase = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."""
+
+description = f"{phrase:.60}"</code></pre>
+
+<p>Output</p>
+
+<pre>
+<code class="language-python">'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'</code></pre>
+
+<p>Utile pour tous les endroits o&ugrave; vous avez un nombre limit&eacute; de caract&egrave;res (les descriptions de vid&eacute;os YouTube, articles de blogs etc).</p>
+
+<div class="note">Il existe d&#39;autres fa&ccedil;ons plus efficaces de tronquer une cha&icirc;ne de caract&egrave;res, notamment la fonction textwrap.shorten de la librairie standard qui permet&nbsp;en plus&nbsp;d&#39;ajouter facilement des points de suspension &agrave; la fin de la phrase.</div>
+
+<p>Pour une liste plus compl&egrave;te d&#39;options de formatage que vous pouvez utiliser, je vous conseille <a href="http://pyformat.info/" target="_blank">ce site</a> tr&egrave;s bien fait qui est une r&eacute;f&eacute;rence en la mati&egrave;re.</p>
+
+<h2 class="border-bottom text-light toc">🐍 L&#39;avantage de format sur les f-string</h2>
+
+<p>La plupart du temps, les f-string sont <strong>beaucoup plus agr&eacute;ables &agrave; lire et facile &agrave; utiliser</strong> que la m&eacute;thode format.</p>
+
+<p>J&#39;utilise <strong>95% du temps</strong> les f-string mais il reste encore quelques cas de figure dans lesquels la m&eacute;thode format est utile.</p>
+
+<p>👉 Le principal avantage de la m&eacute;thode format est que vous pouvez d&eacute;finir votre cha&icirc;ne de caract&egrave;res &agrave; un endroit de votre script et ne l&#39;utiliser que plus tard.</p>
+
+<p>Les f-string n&eacute;cessitent que les variables que vous ins&eacute;rez dans votre cha&icirc;ne de caract&egrave;res soient disponible imm&eacute;diatement.</p>
+
+<p>Si vous essayez d&#39;ins&eacute;rer dans un f-string une variable qui n&#39;a pas encore &eacute;t&eacute; d&eacute;clar&eacute;e, vous obtiendrez &eacute;videmment une erreur :</p>
+
+<pre>
+<code class="language-python">&gt;&gt;&gt; prenom = "Pierre"
+&gt;&gt;&gt; phrase = f"Bonjour {prenom}, cette semaine vous avez regardé {nombre} vidéos."
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+NameError: name 'nombre' is not defined</code></pre>
+
+<p>Or, il arrive que l&#39;on d&eacute;finisse des cha&icirc;nes de caract&egrave;res &agrave; utiliser dans un fichier de configuration et que l&#39;on souhaite utiliser ces phrases &agrave; diff&eacute;rents endroits de notre script avec des variables qui seront d&eacute;finies par la suite.</p>
+
+<pre>
+<code class="language-python"># constants.py
+BONJOUR = "Bienvenue {prenom}, vous avez regardé {nombre_videos} vidéos cette semaine."
+AU_REVOIR = "À bientôt {prenom} !"</code></pre>
+
+<pre>
+<code class="language-python"># main.py
+from constants import BONJOUR
+
+user = input("Entrez votre nom d'utilisateur : ")
+progression = get_weekly_progress(user)
+
+message_de_bienvenue = BONJOUR.format(prenom=user, nombre_videos=progression)
+print(message_de_bienvenue)</code></pre>
+
+<p>Ici, on d&eacute;finit&nbsp;des phrases &agrave; afficher dans un fichier <code>constants.py</code>.</p>
+
+<p>On utilise ensuite ces phrases en les formatant dans le script <code>main.py</code>.</p>
+
+<p>On pourrait ainsi r&eacute;-utiliser ces phrases dans plusieurs scripts sans avoir besoin de les r&eacute;&eacute;crire &agrave; chaque fois.</p>
+
+<h2 class="border-bottom text-light toc">🐍 Comment savoir quelle m&eacute;thode utiliser ?</h2>
+
+<p>Comme souvent, &ccedil;a d&eacute;pend. Il y a d&eacute;j&agrave; souvent <strong>la pr&eacute;f&eacute;rence personnelle</strong> qui joue.</p>
+
+<p>👉 Personnellement j&#39;aime beaucoup les f-string et je les utilise d&egrave;s que possible.</p>
+
+<p>Il se peut cependant que vous soyez oblig&eacute;s par le projet sur lequel vous travaillez d&#39;utiliser la m&eacute;thode format pour des raisons de <strong>r&eacute;trocompatibilit&eacute;</strong>.</p>
+
+<p>Les f-string n&#39;ayant &eacute;t&eacute; introduits que dans la version 3.6 de Python, si votre code doit fonctionner sur la version 2 et la version 3 de Python, vous serez oblig&eacute; d&#39;utiliser la m&eacute;thode format.</p>
+
+<div class="error">La m&eacute;thode de formatage avec le symbole <code>%</code> est &agrave; proscrire car elle est obsol&egrave;te.</div>
+
+<p>La m&eacute;thode format reste encore &agrave; privil&eacute;gier dans certains cas de figure comme ceux que nous avons vu ci-dessus.</p>
+
+<p>Pour tout le reste, les f-string sont vos amis 🤗</p>
+                </div>
+
+            </div> <!-- / .row -->
+            <div id="end-of-post"></div>
+        </div> <!-- / .container -->
+    </section>
+
+
+
+</div>
+
+    <section class="pt-6 pt-md-8 pb-10">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+                    <div id="disqus_thread"></div>
+
+                    <input type="hidden" id="canonical_url" name="canonical_url" value="https://www.docstring.fr/blog/le-formatage-des-chaines-de-caracteres-avec-python/">
+                    <input type="hidden" id="post_slug" name="post_slug" value="le-formatage-des-chaines-de-caracteres-avec-python">
+                    <script>
+var disqus_config = function () {
+this.page.url = document.getElementById("canonical_url").value;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = document.getElementById("post_slug").value; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://docstring-fr.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+
+
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- CTA
+================================================== -->
+<section class="">
+    <div class="container py-6 py-md-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-md">
+
+                <!-- Heading -->
+                <h3 class="mb-1 font-weight-bold text-white-80">
+                    Abonne-toi à l'infolettre,
+                </h3>
+
+                <!-- Text -->
+                <p class="font-size-lg text-muted mb-6 mb-md-0">
+                    pour recevoir en exclusivité les prochains articles.
+                </p>
+
+            </div>
+            <div class="col-12 col-md-6">
+                <!-- Form -->
+                <form action="/blog/" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="5HiPTfyDdaUgOtD7rVCzwFxOeypCtxdxztUkw7vdZFCZ1MRyHP0vOPEpWHuYNw8x">
+                    <div class="row">
+                        <div class="col">
+                            <!-- Input -->
+                            <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+                            
+                        </div>
+                        <div class="col-auto ml-n6">
+                            <!-- Button -->
+                            <button type="submit" class="btn btn-success-soft">S'abonner</button>
+                        </div>
+
+                    </div> <!-- / .row -->
+                </form>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+
+
+
+<!-- POPULAR ARTICLES
+================================================== -->
+<section class="pt-7 pt-md-7 mb-7 mt-7">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Heading -->
+                <h3 class="mb-0 text-white-80">
+                    Articles populaires
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-5 text-muted">
+                    Tout le monde les as lus, au moins deux fois !
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row">
+
+            
+            
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+                <!-- Card -->
+                <div class="card bg-secondary mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+
+                    <!-- Image -->
+                    <a class="card-img-top" href="/blog/python-origine-hello-world/">
+
+                        <!-- Image -->
+                        <img src="/media/blog_posts/python-origine-hello-world/thumbnail/python-origine-hello-world.jpg" alt="..." class="card-img-top">
+
+                    </a>
+
+                    <!-- Body -->
+                    <a class="card-body mt-5" href="/blog/python-origine-hello-world/">
+
+                        <!-- Heading -->
+                        <h3 class="text-white-70">
+                            Les origines du Hello, World!
+                        </h3>
+
+                        <!-- Text -->
+                        <p class="mb-0 text-muted">
+                            De ses origines dans les années 70 à sa maintenant …
+                        </p>
+
+                    </a>
+
+                    <!-- Meta -->
+                    <a class="card-meta mt-auto" href="#!">
+
+                        <!-- Divider -->
+                        <hr class="card-meta-divider">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm mr-2">
+                            <img src="/media/profile_pictures/33.jpg" alt="Image de profil de l'auteur" class="avatar-img rounded-circle">
+                        </div>
+
+                        <!-- Author -->
+                        <h6 class="text-uppercase text-muted mr-2 mb-0">
+                            Thibault Houdon
+                        </h6>
+
+                        <!-- Date -->
+                        <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                            <time datetime="2019-11-01">01 nov</time>
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+                <!-- Card -->
+                <div class="card bg-secondary mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+
+                    <!-- Image -->
+                    <a class="card-img-top" href="/blog/5-raisons-apprendre-python/">
+
+                        <!-- Image -->
+                        <img src="/media/blog_posts/5-raisons-apprendre-python/thumbnail/5-raisons-apprendre-python.jpg" alt="..." class="card-img-top">
+
+                    </a>
+
+                    <!-- Body -->
+                    <a class="card-body mt-5" href="/blog/5-raisons-apprendre-python/">
+
+                        <!-- Heading -->
+                        <h3 class="text-white-70">
+                            5 raisons d&#x27;apprendre Python en 2020
+                        </h3>
+
+                        <!-- Text -->
+                        <p class="mb-0 text-muted">
+                            Tu te demandes quel langage de programmation apprendre en 2020 …
+                        </p>
+
+                    </a>
+
+                    <!-- Meta -->
+                    <a class="card-meta mt-auto" href="#!">
+
+                        <!-- Divider -->
+                        <hr class="card-meta-divider">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm mr-2">
+                            <img src="/media/profile_pictures/33.jpg" alt="Image de profil de l'auteur" class="avatar-img rounded-circle">
+                        </div>
+
+                        <!-- Author -->
+                        <h6 class="text-uppercase text-muted mr-2 mb-0">
+                            Thibault Houdon
+                        </h6>
+
+                        <!-- Date -->
+                        <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                            <time datetime="2019-10-27">27 oct</time>
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+                <!-- Card -->
+                <div class="card bg-secondary mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+
+                    <!-- Image -->
+                    <a class="card-img-top" href="/blog/un-terminal-pour-windows/">
+
+                        <!-- Image -->
+                        <img src="/media/blog_posts/un-terminal-pour-windows/thumbnail/un-terminal-pour-windows.jpg" alt="..." class="card-img-top">
+
+                    </a>
+
+                    <!-- Body -->
+                    <a class="card-body mt-5" href="/blog/un-terminal-pour-windows/">
+
+                        <!-- Heading -->
+                        <h3 class="text-white-70">
+                            Un terminal pour Windows
+                        </h3>
+
+                        <!-- Text -->
+                        <p class="mb-0 text-muted">
+                            Si vous utilisez Windows et que vous êtes développeur vous …
+                        </p>
+
+                    </a>
+
+                    <!-- Meta -->
+                    <a class="card-meta mt-auto" href="#!">
+
+                        <!-- Divider -->
+                        <hr class="card-meta-divider">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm mr-2">
+                            <img src="/media/profile_pictures/33.jpg" alt="Image de profil de l'auteur" class="avatar-img rounded-circle">
+                        </div>
+
+                        <!-- Author -->
+                        <h6 class="text-uppercase text-muted mr-2 mb-0">
+                            Thibault Houdon
+                        </h6>
+
+                        <!-- Date -->
+                        <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                            <time datetime="2019-11-08">08 nov</time>
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+            
+
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+
+
+<div class="row mb-7"></div>
+
+
+
+
+    
+
+
+<!-- FOOTER
+  ================================================== -->
+<footer class="py-8 py-md-6 bg-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 col-lg-3 text-center align-self-center">
+                <!-- Brand -->
+                <img src="/static/img/logo_dark.png" alt="Docstring Logo" class="img-fluid mb-2">
+                <span class="text-muted">v1.2.0</span>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 text-center align-self-top">
+                <!-- Text -->
+                <div class="col text-light"><a href="/" class="text-reset">Accueil</a></div>
+                <div class="col text-light"><a href="/formations/" class="text-reset">Formations</a></div>
+                <div class="col text-light"><a href="/blog/" class="text-reset">Articles</a></div>
+                <div class="col text-light"><a href="/contact" class="text-reset">Nous Contacter</a></div>
+
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 text-center align-self-top">
+                <!-- Text -->
+                <div class="col text-light"><a href="/blog/search/" class="text-reset">Recherche</a></div>
+                <div class="col text-light"><a href="/termes-et-conditions/" class="text-reset">Termes et conditions</a></div>
+                <div class="col text-light"><a href="/conditions-generales-de-vente/" class="text-reset">CGV</a></div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 align-self-center text-center">
+                <!-- Social -->
+                <ul class="list-unstyled list-inline list-social mb-md-0">
+                    <li class="list-inline-item list-social-item mr-3">
+                        <a href="https://discordapp.com/invite/NWQvTeX" target="_blank" class="text-decoration-none">
+                            <img src="/static/img/icons/social/discord.svg" class="list-social-icon" alt="Serveur Discord">
+                        </a>
+                    </li>
+                    <li class="list-inline-item list-social-item mr-3">
+                        <a href="https://www.youtube.com/channel/UCo2zkK2d_frGSXctIkftALw" target="_blank" class="text-decoration-none">
+                            <img src="/static/img/icons/social/youtube.svg" class="list-social-icon" alt="Chaîne Youtube">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</footer>
+
+
+
+
+<!-- JAVASCRIPT
+  ================================================== -->
+<!-- Libs JS -->
+
+<script src="/static/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+<script src="/static/libs/jarallax/dist/jarallax.min.js"></script>
+<script src="/static/libs/jarallax/dist/jarallax-video.min.js"></script>
+<script src="/static/libs/jarallax/dist/jarallax-element.min.js"></script>
+<script src="/static/libs/typed.js/lib/typed.min.js"></script>
+<script src="/static/js/highlight.pack.js"></script>
+
+<script src="/static/libs/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/static/js/toastr.min.js"></script>
+
+<!--Vimeo-->
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+<!-- Theme JS -->
+<script src="/static/js/theme.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/static/js/lazysizes.min.js" async></script>
+<script src="/static/js/marked.min.js"></script>
+<script src="/static/js/purify.min.js"></script>
+<script src="/static/js/script.js?v=9"></script>
+
+
+
+
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "d0285adb-7ada-4604-b9d8-6fa25d8dfb4e";
+        (function () {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+
+
+</body>
+
+
+</html>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/BaseDeDonnees" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/BatailleNavale" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/CodeAvecJonathan" vcs="Git" />
@@ -39,5 +40,7 @@
     <mapping directory="$PROJECT_DIR$/ZCasino" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lepython" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/objectifjeux" vcs="Git" />
+=======
+>>>>>>> refs/remotes/origin/master
   </component>
 </project>

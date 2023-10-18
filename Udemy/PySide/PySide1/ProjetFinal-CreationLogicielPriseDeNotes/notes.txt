@@ -1,0 +1,5 @@
+Bien important de commencer en planifiant l'application.
+
+1. Faire le code seul, sans l'interface.
+2. Faire l'interface dans QtDesigner.
+3. Connect l'interface avec le code.

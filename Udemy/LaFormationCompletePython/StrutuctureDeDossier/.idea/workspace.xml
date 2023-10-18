@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="319976ce-4e59-40b7-8e57-9e976e0c017c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ChercherDesInformationsDansUnDossier/.idea/ChercherDesInformationsDansUnDossier.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Documents/facture_01.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Documents/facture_02.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Documents/facture_03.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Documents/facture_04.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Documents/facture_05.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Images/berlin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Images/image_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Images/image_02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Images/vacances_01_0001.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Images/vacances_01_0002.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Musique/a_sky_full_of_stars.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Musique/now_that_your_gone.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Musique/used_to_be.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Videos/grece.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/Videos/vacances_italie.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChercherDesInformationsDansUnDossier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChercherDesInformationsDansUnDossier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/a_sky_full_of_stars.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/berlin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/facture_01.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/facture_02.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/facture_03.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/facture_04.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/facture_05.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/fichier1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/grece.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/image_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/image_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/now_that_your_gone.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/trier_des_fichiers_selon_leur_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/trier_des_fichiers_selon_leur_type.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/used_to_be.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/vacances_01_0001.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/vacances_01_0002.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TrierDesFichiersSelonLeurType/vacances_italie.mp4" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1iVI4lV0I4dE3dRGufxsDAYYHZB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Python.structure_de_dossier">
+    <configuration name="__main__" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="StrutuctureDeDossier" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__main__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="structure_de_dossier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="StrutuctureDeDossier" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/structure_de_dossier.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.__main__" />
+      <item itemvalue="Python.structure_de_dossier" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.structure_de_dossier" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="319976ce-4e59-40b7-8e57-9e976e0c017c" name="Default Changelist" comment="" />
+      <created>1601986143373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601986143373</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="258" key="#Inspections" timestamp="1602085846478">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="586" y="258" key="#Inspections/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1602085846478" />
+    <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601986405038">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1601986405038" />
+    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1602171573408">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1602171573408" />
+    <state width="1899" height="321" key="GridCell.Tab.0.bottom" timestamp="1602142843343">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1602142843343" />
+    <state width="1899" height="321" key="GridCell.Tab.0.center" timestamp="1602142843343">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1602142843343" />
+    <state width="1899" height="321" key="GridCell.Tab.0.left" timestamp="1602142843343">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1602142843343" />
+    <state width="1899" height="321" key="GridCell.Tab.0.right" timestamp="1602142843343">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1899" height="321" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1602142843343" />
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1602088627429">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1602088627429" />
+  </component>
+</project>

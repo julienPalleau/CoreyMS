@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: '{"login": "xtutran@gmail.com", "password": "Password123"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '57'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.11.1
+    method: POST
+    uri: https://my.labguru.com/api/v1/sessions.json
+  response:
+    body:
+      string: !!binary |
+        H4sIAFAyPGQAA6pWKsnPTs1TslLSNVTSUSotygEyM0pKCoqt9PVzK/VyEpPSS4tK9ZLzc/WVagEA
+        AAD//wMA8jwTFy4AAAA=
+    headers:
+      Cache-Control:
+      - no-cache, no-store
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 16 Apr 2023 17:37:20 GMT
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - rhino-core-shield
+      Status:
+      - 401 Unauthorized
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 1f68d4da-36bc-47fc-9326-09953c5e5e65
+      X-Runtime:
+      - '0.014767'
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 401
+      message: Unauthorized
+version: 1

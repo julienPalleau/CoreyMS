@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="083b16dc-e864-40db-bb53-179fcee01f61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../PySide2/PyConverter/src/main/python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PySide2/PyConverter/src/main/python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PySide2/PyTasks/src/main/python/package/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PySide2/PyTasks/src/main/python/package/main_window.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1iUoNGi9YcGdBJVGMIchObaBcVM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="RunManager">
+    <configuration name="ListeDeCourses" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="ListeDeCourses" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="ListeDeCourses" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="083b16dc-e864-40db-bb53-179fcee01f61" name="Default Changelist" comment="" />
+      <created>1601971489568</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601971489568</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="590" y="283" key="#Inspections" timestamp="1601972344668">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="590" y="283" key="#Inspections/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1601972344668" />
+    <state x="419" y="319" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601971989583">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="419" y="319" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1601971989583" />
+    <state x="745" y="419" key="FileChooserDialogImpl" timestamp="1601972748462">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="745" y="419" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1601972748462" />
+    <state width="1882" height="319" key="GridCell.Tab.0.bottom" timestamp="1601972750110">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1882" height="319" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1601972750110" />
+    <state width="1882" height="319" key="GridCell.Tab.0.center" timestamp="1601972750110">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1882" height="319" key="GridCell.Tab.0.center/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1601972750110" />
+    <state width="1882" height="319" key="GridCell.Tab.0.left" timestamp="1601972750110">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1882" height="319" key="GridCell.Tab.0.left/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1601972750110" />
+    <state width="1882" height="319" key="GridCell.Tab.0.right" timestamp="1601972750110">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1882" height="319" key="GridCell.Tab.0.right/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1601972750110" />
+  </component>
+</project>

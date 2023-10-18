@@ -1,0 +1,19 @@
+class Voiture:
+    voitures_crees = 0
+    def __init__(self, marque):
+        Voiture.voitures_crees += 1
+        self.marque = marque
+
+    def afficher_marque(self):
+        print(f"La voiture est une {self.marque}")
+
+
+voiture_01 = Voiture("Lamborghini")
+print(voiture_01.marque)
+print(Voiture.voitures_crees)
+voiture_01.afficher_marque()
+
+voiture_02 = Voiture("Porshe")
+print(voiture_02.marque)
+print(Voiture.voitures_crees)
+voiture_02.afficher_marque()

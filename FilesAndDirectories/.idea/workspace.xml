@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e679dfcc-c967-469d-8c53-5d304bf751f8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ExercicesBackup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/FilesAndDirectories.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RealPython.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skip_dirs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PySimpleGui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/20-materials-namespace-package.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/Desktop/Notes/hash-tables.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/Desktop/realpython/iterate-dict.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/Desktop/realpython/tictactoe.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/Desktop/scripts/rename_files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/Desktop/scripts/request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/Desktop/todo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/bonus/iterdir.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/bonus/listdir.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/bonus/make_files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/bonus/scandir.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/bonus/testing_flat_dir.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/bonus/testing_nested_dir.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/bonus/timing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/bonus/walk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/create_large_dir.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/skip_dirs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pygamon/natureset.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/.idea/qualif2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023.7z" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/advanced/advanced.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/advanced/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/advanced/filt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/advanced/rob1a_v03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/lite/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/lite/filt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/lite/lite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/lite/rob1a_v03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/plot_mission.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif1/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif1/filt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif1/qualif1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif1/rob1a_v03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif2/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif2/filt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif2/qualif2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif2/rob1a_v03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif3/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif3/filt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif3/qualif3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/qualif3/rob1a_v03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/speed/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/speed/filt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/speed/rob1a_v03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/py/speed/speed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/advanced/advancedA.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/advanced/advancedB.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/advanced/advancedC.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/advanced/rob1a-advanced.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/advanced/rob1a-run.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/advanced/setup-advancedA.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/advanced/setup-advancedB.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/advanced/setup-advancedC.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif1/qualif1A.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif1/rob1a-qualif1.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif1/rob1a-run.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif1/setup-qualif1A.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif2/qualif2A.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif2/qualif2B.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif2/rob1a-qualif2.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif2/rob1a-run.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif2/setup-qualif2A.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif2/setup-qualif2B.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif3/qualif3A.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif3/qualif3B.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif3/qualif3C.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif3/rob1a-qualif3.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif3/rob1a-run.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif3/setup-qualif3A.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif3/setup-qualif3B.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/qualif3/setup-qualif3C.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/speed/rob1a-run.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/speed/rob1a-speed.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/speed/setup-speedA.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/speed/setup-speedB.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/speed/setup-speedC.prm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/speed/speedA.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/speed/speedB.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/bca2023/bca2023/scenes/speed/speedC.ttt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/control_orig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/filt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/lab2_tutorial.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/qualif2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/qualif2_orig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2/rob1a_v03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/.idea/qualif2[2363].iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/control_orig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/filt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/lab2_tutorial.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/qualif2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/qualif2_orig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../qualif2[2363]/rob1a_v03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hyperskills/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hyperskills/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hyperskills/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Hyperskills/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hyperskills/Exercices.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Hyperskills/Exercices.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MojOCqYAA3ptbaoeXMFexLHDoq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/MOTTIER LUCIE/Documents/GitHub/Udemy/CompletePythonBootcampFromZeroToHeroInPython"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python.RPfiles">
+    <configuration name="RPfiles" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FilesAndDirectories" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\MOTTIER LUCIE\.virtualenvs\Hyperskills\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RPfiles.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\MOTTIER LUCIE\.virtualenvs\Hyperskills\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="examples" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FilesAndDirectories" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\MOTTIER LUCIE\.virtualenvs\Hyperskills\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../RealPython/209-materials-python-get-all-files-in-directory/examples.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.RPfiles" />
+        <item itemvalue="Python.examples" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e679dfcc-c967-469d-8c53-5d304bf751f8" name="Changes" comment="" />
+      <created>1678440794553</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678440794553</updated>
+    </task>
+    <servers />
+  </component>
+</project>
