@@ -2,6 +2,16 @@
 # https://www.youtube.com/watch?v=67Sa81g2zLI
 
 """
+#######################################
+# Difference entre serie et DataFrame #
+#######################################
+Les series sont des tableaux à une dimension sur lesquelles on va mettre un index
+Les DataFrames sont des tableaux à deux dimensions sur lesquelles on va mettre des index (sur les lignes et sur les
+colonnes)
+
+#####################################
+# Qu'est-ce qu'un index dans Pandas #
+#####################################
 - Un index est un objet imuable qui est a la frontiere du set et de la liste.
 - Un index contient des elements qui sont hashables, comme un set, et il est sliceable, comme une liste.
 - De plus, l'index va definir une relation d'ordre sur les elements qui sont stockes, et il peut contenir des
@@ -67,4 +77,38 @@ print(f"Si je regarde ma nouvelle serie avec l'index trie:\n{s}")
 # iloc[0] me permet d'obtenir le premier element de la serie
 print("\n")
 print(s.iloc[0])
-print(f"slice sur index donc comportement habituel de i a j-1:\n{s.iloc[1:3]}") # slice sur index donc on retrouve le comportement habituel du slice de i a j-1
+print(
+    f"slice sur index donc comportement habituel de i a j-1:\n{s.iloc[1:3]}")  # slice sur index donc on retrouve le comportement habituel du slice de i a j-1
+
+# !!!!!!!!!!!!!! Slice sur Iloc et slice sur Loc !!!!!!!!!!!!!!!!!!!!!!!
+# slice sur iloc ou slice sur index -> comportement classique du slice de i à j-1
+# slice sur loc ou slice sur label -> slice de i à j inclus
+
+# Comme les tableaux numpy les series acceptent egalement la notion d'indexation avance
+# Exemple:
+print("\n")
+print(s.loc[(s == 'chien') | (s == 'poisson')])
+
+
+# Je peux maintenant faire de l'affectation en disant que tous ceux qui valent chien ou poisson sont remplaces par autre
+# NaN Not a Number
+print("\n")
+s.loc[(s == 'chien') | (s == 'poisson')] = 'autre'
+print(f"nouvelle serie ou l'on a remplace chien et poisson par autre:\n{s}")
+
+
+# Notion d'alignement d'index
+# Creons 2 series:
+print("/n")
+s1 = pd.Series([1, 2, 3], index=list('abc'))
+s2 = pd.Series([5, 6, 7], index=list('acd'))
+
+print(f"serie s1:\n{s1}")
+print(f"serie s2:\n{s2}")
+print(f"serie s1 + s2:\n{s1 + s2}")
+
+# On remarque que S1 et S2 sont des int64 (executer le pgm) et que S1 + S2 est un float 64 car les NaN sont definis
+# dans les float 64
+
+# Il est possible d'assigner une valeur par defaut aux NaN:
+print(s1.add(s2, fill_value=50))
