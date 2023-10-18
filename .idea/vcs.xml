@@ -2,48 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BackupUdemy" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BackupUdemy/TheCompletePythonCourse" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BaseDeDonnees" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BatailleNavale" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/CodeAvecJonathan" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Cours_git/mon_site_web" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Darchevillepatrick" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/DataCleaningPandas" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/DataScience" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Docstring" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ExerciceMosh" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/GitDoc" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/JasonChampagne" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/JoeJames/Python" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/MachineLearnia" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/OOP" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/OpenClassroom" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PyQt" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Pygame" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Python Scripts/Annee Bissextile" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Python Scripts/OpenClassRoom/AvancezPasAPasVersLaModularite" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Python Scripts/TicTacToe" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Python Scripts/Tkinter" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Python Scripts/jeux aleatoires" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PythonDoc" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Relion" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Sabine" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Sabine/Game1/Ortho" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Statistiques" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/TechWithTim" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Teclado" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/TestsGit" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/TestsGit/simplegit-progit" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Tkinter" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Udemy" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/UdemyBackup" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Venus" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Venus/Docstring" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Venus/Documents/GitHub/Venus" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ZCasino" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lepython" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/objectifjeux" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/pycharm-Template" vcs="Git" />
   </component>
 </project>
