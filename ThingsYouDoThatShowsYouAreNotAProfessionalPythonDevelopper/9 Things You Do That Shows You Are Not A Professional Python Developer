@@ -1,0 +1,435 @@
+# https://python.plainenglish.io/9-things-you-do-that-show-you-are-not-a-python-professional-b8e0681af9e3
+9 Things You Do That Shows You Are Not A Professional Python Developer
+Adejumo Ridwan Suleiman
+Python in Plain English
+
+
+
+Python is one of the most popular programming languages, its use case is found in web development, data science, artificial intelligence, robotics, and many other areas. In this, article you will learn how to fix the bad habits you have stuck to over the years or brought from other programming languages.
+Manual String Formatting
+
+Most of the time you see beginner Pythonistas using the + sign when combining two strings.
+
+>>> name = "Ridwan"
+>>> age = "22"
+>>> print("My Name is " + name + " and I am " + age + " years old")
+My Name is Ridwan and I am 22 years old
+
+Instead of using the + sign, use the f string which makes your code readable, concise, and less prone to errors.
+
+>>> print(f"My Name is {name} and I am {age} years old")
+My Name is Ridwan and I am 22 years old
+
+Using Default Mutable Arguments
+
+In Python, anytime you pass a mutable value as an argument in a function, the default argument is mutated anytime the function is called. These mutable arguments are usually lists or dictionaries.
+
+Take a look at the example below;
+
+>>> def append(n, l=[]):
+...     l.append(n)
+...     return l
+...
+
+After defining the append function with a mutable argument l = [], anytime you call the function with a value of n, it changes the default value of l.
+
+>>> l1 = append(0)
+>>> l1
+[0]
+
+When next you call the function with a different value of n, you are going to see the previous value you used appended to the empty list argument.
+
+>>> l2 = append(1)
+>>> l2
+[0, 1]
+
+This problem can be solved by rewriting the code as,
+
+>>> def append(n, l = None):
+...     if l is None:
+...         l = []
+...     l.append(n)
+...     return l
+...
+>>> l1 = append = [0]
+>>> l2 = append = [1]
+>>> l1,l2
+([0], [1])
+
+Now the argument l is set to None, anytime the function is called even if l is mutated, it is reassigned as None and then given the value of an empty list.
+Not Using Comprehensions
+
+Python comprehension provides you with a short and concise way of constructing sequences, last time I checked, Python supports 4 types of comprehension;
+
+    List Comprehensions
+    Dictionary Comprehensions
+    Set Comprehensions
+    Generator Comprehensions
+
+You can read more about them here.
+
+The code below divides the values in a dictionary by 2,
+
+>>> numbers = {}
+>>> for i in range(10):
+...     numbers[i] = i/2
+...
+>>> numbers
+{0: 0.0, 1: 0.5, 2: 1.0, 3: 1.5, 4: 2.0, 5: 2.5, 6: 3.0, 7:
+3.5, 8: 4.0, 9: 4.5}
+
+The above code can be written in a single line as,
+
+>>> {i: i/2 for i in range(10)}
+{0: 0.0, 1: 0.5, 2: 1.0, 3: 1.5, 4: 2.0, 5: 2.5, 6: 3.0, 7:
+3.5, 8: 4.0, 9: 4.5}
+
+So stop making life difficult for yourself, and start using comprehension.
+Checking for Equality instead of Identity
+
+Given,
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+If I ask you to check if the two variables are identical, the first thing to come to your mind is,
+
+>>> a == b
+True
+
+The thing is that you need to know the difference between Identity and Equality.
+
+Two variables can be equal but not identical.
+
+If you check the memory addresses of a and b,
+
+>>> id(a), id(b)
+(1838093945856, 1838093487488)
+
+You can see that they both have different addresses despite the fact that they have the same object.
+
+This is the reason why when you run,
+
+>>> a == b
+True
+
+You get True, but when you run
+
+>>> a is b
+False
+
+You get False, a and b are equal but not identical.
+
+In the case where you have,
+
+>>> c = [1,2,3]
+>>> d = c
+>>> id(c), id(d)
+(1838089019712, 1838089019712)
+
+You can see, c and d are both equal and identical, the object in c is also assigned to d.
+
+>>> c == d
+True
+>>> c is d
+True
+
+This implies c and d have both the same value and memory addresses.
+
+Hence you can say c is identical and equal to d.
+
+All this epistle is to make you know the difference between is and ==, the former is used in checking identity while the latter is used in checking equality.
+
+    All Identical variables are equal but not all Equal variables are identical
+
+Not Using Tuple Unpacking
+
+Anytime you create a tuple in Python, it is known as packing a tuple,
+
+>>> a_tuple = 1,2,3
+>>> a_tuple
+(1, 2, 3)
+
+These values can be extracted back into various variables by unpacking
+
+>>> x = a_tuple[0]
+>>> y = a_tuple[1]
+>>> z = a_tuple[2]
+>>> print(x, y, z)
+1, 2, 3
+
+Instead of unpacking the elements in a tuple using multiple lines of code, you can do it in a single line of code.
+
+>>> x,y,z = a_tuple
+>>> print(x, y, z)
+1, 2, 3
+
+Creating Your Own Index Counter Variable
+
+This one is common from those coming from other programming languages, you are asked to create a index counter variable and you type something like;
+
+>>> a_list = [1,2,3,4,5,6,7,8,9,10]
+>>> index = 0
+>>> for elem in a_list:
+...     print(index, elem)
+...     index += 1
+...
+0 1
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+8 9
+9 10
+
+Instead, use the enumerate function to make your code look Pythonic;
+
+>>> for index, elem in enumerate(a_list):
+...     print(index, elem)
+...
+0 1
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+8 9
+9 10
+
+Using Print Statement Instead of the Logging Module
+
+This might not matter in small projects but will surely help you in larger projects.
+
+Instead of littering your code with print statements, use logging instead.
+
+>>> print('This is a warning message')
+This is a warning message
+>>> print('This is an error message')
+This is an error message
+>>> print('This is a critical message')
+This is a critical message
+
+Logging helps display useful messages to your users to add more context and understanding to what is happening in the code base.
+
+>>> import logging
+>>> logging.warning('This is a warning message')
+WARNING:root:This is a warning message
+>>> logging.error('This is an error message')
+ERROR:root:This is an error message
+>>> logging.critical('This is a critical message')
+CRITICAL:root:This is a critical message
+
+Importing functions and classes in a named module with import *
+
+This bad habit most at times is common among newbies.
+
+Importing using import * corrupts your namespace by importing all the functions and classes from that named module into your code which is likely to conflict with the functions you define or functions of other libraries imported.
+Not Following pep8
+
+Most of us are guilty of this,
+
+Before I get cancelled 😂, I know some of my codes in this article might have broken the rules of PEP-8, but the truth is bitter and needs to be told, following PEP-8 style and guidelines makes it easier for others to read and understand your code.
+
+Not Recommended
+
+>>> def function():
+...     x = [1,2,3]
+...     y= [2,3,5]
+...     z = [1, 2,3]
+...
+>>> def value(x = 7):
+...     ...
+...
+
+Recommended
+
+>>> def function():
+...     x = [1, 2, 3]
+...     y = [2, 3, 5]
+...     z = [1, 2, 3]
+...
+>>> def number(x=7):
+...     ...
+...
+
+To read more about the PEP-8 style and guidelines, check out this article.
+
+    Thank you for taking your time to read our article.
+
+More content at PlainEnglish.io. Sign up for our free weekly newsletter. Follow us on Twitter, LinkedIn, YouTube, and Discord. Interested in Growth Hacking? Check out Circuit.
+Data Science
+Machine Learning
+Python
+Python Programming
+Web Development
+
+Adejumo Ridwan Suleiman
+Python in Plain English
+Written by Adejumo Ridwan Suleiman
+634 Followers
+·Writer for
+
+Python in Plain English
+
+Programmer, Statistician and Writer. If you enjoy my articles and want to support me, please buy me a book @ https://www.buymeacoffee.com/adejumo.
+Follow
+More from Adejumo Ridwan Suleiman and Python in Plain English
+8 R Programming Tips and Tricks That Will Make You More Efficient
+Adejumo Ridwan Suleiman
+
+Adejumo Ridwan Suleiman
+
+in
+
+Level Up Coding
+8 R Programming Tips and Tricks That Will Make You More Efficient
+8 R Programming Tips and Tricks That Will Make You More Efficient
+5 min read·Dec 29, 2022
+
+2
+From My Notebook: 100 Python Tricks to Get a Job at Google (or Any Big Company)
+Builescu Daniel
+
+Builescu Daniel
+
+in
+
+Python in Plain English
+From My Notebook: 100 Python Tricks to Get a Job at Google (or Any Big Company)
+Unlocking 100 Python secrets from my notes, complete with examples. Learn the typical and the top-tier approaches. Ready for Big Tech?
+·84 min read·Oct 16
+
+8
+Wanna Code Like a Google Engineer? Let’s Dive into Advanced Python Together!
+Builescu Daniel
+
+Builescu Daniel
+
+in
+
+Python in Plain English
+Wanna Code Like a Google Engineer? Let’s Dive into Advanced Python Together!
+Unlock the secrets of advanced Python, straight from an Ex-Googler! Dive into syntax, efficient looping, magical libraries, and more. If…
+·21 min read·Aug 21
+
+13
+9 Python Frameworks for Frontend Development: JavaScript Alternatives
+Adejumo Ridwan Suleiman
+
+Adejumo Ridwan Suleiman
+
+in
+
+Python in Plain English
+9 Python Frameworks for Frontend Development: JavaScript Alternatives
+4 min read·Sep 22
+
+9
+See all from Adejumo Ridwan Suleiman
+See all from Python in Plain English
+Recommended from Medium
+20 Python Scripts with Code to Automate Your Work
+Abdul Hannan Hassan
+
+Abdul Hannan Hassan
+20 Python Scripts with Code to Automate Your Work
+Are you tired of performing repetitive tasks in your daily work routine? Python, with its simplicity and versatility, can be the solution…
+·10 min read·Jul 25
+
+25
+12 Python Features Every Data Scientist Should Know
+Benedict Neo
+
+Benedict Neo
+
+in
+
+bitgrit Data Science Publication
+12 Python Features Every Data Scientist Should Know
+Master the essential Python fundamentals
+6 min read·May 24
+
+11
+Lists
+Predictive Modeling w/ Python
+20 stories·600 saves
+Principal Component Analysis for ML
+Time Series Analysis
+deep learning cheatsheet for beginner
+Practical Guides to Machine Learning
+10 stories·680 saves
+Coding & Development
+11 stories·268 saves
+Databricks role-based and specialty certification line-up.
+New_Reading_List
+174 stories·194 saves
+OpenAI Just Killed an Entire Market in 45 Minutes
+Ignacio de Gregorio
+
+Ignacio de Gregorio
+OpenAI Just Killed an Entire Market in 45 Minutes
+The Story Everyone Should Have Seen Coming
+·6 min read·Nov 9
+
+154
+Automate the exploratory data analysis (EDA) to understand the data faster and easier
+Mochamad Kautzar Ichramsyah
+
+Mochamad Kautzar Ichramsyah
+
+in
+
+CodeX
+Automate the exploratory data analysis (EDA) to understand the data faster and easier
+What is EDA?
+11 min read·Jul 11
+
+22
+The Ultimate VS Code Setup for Python
+Ordinary Industries
+
+Ordinary Industries
+The Ultimate VS Code Setup for Python
+Having a well-optimized setup for your Visual Studio Code (VS Code) is nothing short of a game-changer when it comes to unleashing your…
+10 min read·Jul 28
+
+2
+Pandas 2.0: A Game-Changer for Data Scientists?
+Miriam Santos
+
+Miriam Santos
+
+in
+
+Towards Data Science
+Pandas 2.0: A Game-Changer for Data Scientists?
+The Top 5 Features for Efficient Data Manipulation
+8 min read·Jun 27
+
+28
+See more recommendations
+
+Help
+
+Status
+
+About
+
+Careers
+
+Blog
+
+Privacy
+
+Terms
+
+Text to speech
+
+Teams
+
+You are signed out. Sign in with your member account (jp__@g__.com) to view other member-only stories. Sign in
