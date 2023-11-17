@@ -1,3 +1,0 @@
-This is another text file
-But this one is located under the Folder directory
-This is to learn how to use path in python
